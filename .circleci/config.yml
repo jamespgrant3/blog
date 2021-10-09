@@ -37,7 +37,7 @@ jobs:
     docker:
       - image: cimg/python:3.9.1
     environment:
-      S3_BUCKET_NAME: <<YOUR BUCKET NAME HERE>>
+      S3_BUCKET_NAME: jamespgrant3.com
     steps:
       - attach_workspace:
           at: ./

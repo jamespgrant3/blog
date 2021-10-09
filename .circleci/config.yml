@@ -50,7 +50,7 @@ jobs:
             --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text) \
             --paths "/*"
 workflows:
-  test-deploy:
+  blog-deploy:
     jobs:
       - build
       - deploy:

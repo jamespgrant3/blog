@@ -26,7 +26,7 @@ jobs:
           command: |
             bundle exec htmlproofer ./_site \
               --allow-hash-href \
-              --check-favicon  \
+              # --check-favicon  \
               --check-html \
               --disable-external
       - persist_to_workspace:

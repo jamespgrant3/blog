@@ -43,6 +43,12 @@ jobs:
       - run:
           name: Upload to s3
           command: ~/.local/bin/aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete
+      - run:
+          name: Invalidate Cloudfront Distribution
+          command: |
+            aws cloudfront create-invalidation \
+            --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text) \
+            --paths "/*"
 workflows:
   test-deploy:
     jobs:

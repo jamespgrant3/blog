@@ -315,6 +315,7 @@ section {
       &.left {
         float: left;
         .social-media-container {
+          height: 18px;
           &.email {
             margin: 0;
           }
@@ -453,6 +454,7 @@ section {
         &.left {
           .social-media-container {
             float: none;
+            margin: 2px 5px;
           }
         }
       }

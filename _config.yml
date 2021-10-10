@@ -21,11 +21,12 @@
 title: jamespgrant3 
 email: jamespgrant3@gmail.com
 description: >-
-  Daily cloud learnings, as I pretend to be a cloud architect
+  learning cloud, as I pretend to be a cloud architect
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jamespgrant3 
 github_username: jamespgrant3 
+linkedin_username: jamespgrant3 
 
 # Build settings
 theme: minima

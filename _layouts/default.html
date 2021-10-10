@@ -17,28 +17,6 @@
   </head>
 
   <body class="{{ page.colorspace }}">
-      {% if site.show_header %}
-        <div id="header">
-          <nav>
-            {% if site.github.repository_url %}
-              <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
-            {% endif %}
-
-            {% if site.show_downloads %}
-              {% if site.github.zip_url %}
-                <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
-              {% endif %}
-
-              {% if site.github.tar_url %}
-                <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
-              {% endif %}
-
-              <li class="title">DOWNLOADS</li>
-            {% endif %}
-          </nav>
-        </div><!-- end header -->
-      {% endif %}
-
     <div class="wrapper">
       {% if site.show_header %}<section>
       {% else %}<section class="no-header">{% endif %}
@@ -46,8 +24,19 @@
           {% if page.icon %}
             <img src="{{ page.icon | relative_url }}" />
           {% endif %}
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <h1>
+            <a href="{{ site.baseurl }}{% link index.markdown %}">
+              {{ site.title | default: site.github.repository_name }}
+            </a>
+          </h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+        <ul id="pages">
+          <li>
+          <a href="{{ site.baseurl }}{% link about.markdown %}">About</a>
+          </li>
+        </ul>
+
           <hr>
         </div>
 
@@ -55,26 +44,37 @@
 
         <div id="footer">
           <hr />
-          <span class="credits left">Project maintained by <a href="{{ site.github_username }}">{{ site.github_username }}</a></span>
-          <span class="credits center">
-            <ul class="social-media-list">
-              <li>
+          <span class="credits left">
+            <!--Project maintained by <a href="{{ site.github_username }}">{{ site.github_username }}</a>-->
+            <div class="social-media-container purple">
+                <a href="mailto:{{ site.email }}">
+                  <span class="username">{{ site.email }}</span>
+                </a>
+            </div>
+            <div class="social-media-container yellow">
+                <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+                  <svg class="svg-icon">
+                    <use xlink:href="/assets/minima-social-icons.svg#linkedin"></use>
+                  </svg>
+                  <span class="username">{{ site.linkedin_username }}</span>
+                </a>
+            </div>
+            <div class="social-media-container orange">
                 <a href="https://github.com/{{ site.github_username }}">
                   <svg class="svg-icon">
                     <use xlink:href="/assets/minima-social-icons.svg#github"></use>
                   </svg>
                   <span class="username">{{ site.github_username }}</span>
                 </a>
-              </li>
-              <li>
+            </div>
+            <div class="social-media-container cyan">
                 <a href="https://www.twitter.com/{{ site.twitter_username }}">
                   <svg class="svg-icon">
                     <use xlink:href="/assets/minima-social-icons.svg#twitter"></use>
                   </svg>
                   <span class="username">{{ site.twitter_username }}</span>
                 </a>
-              </li>
-            </ul>
+            </div>
           </span>
           <span class="credits right">Theme by <a href="https://draculatheme.com/">Dracula</a></span>
         </div>

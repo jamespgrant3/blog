@@ -6,34 +6,46 @@
 @import "colorspaces.scss";
 
 body {
-  padding:0px 0 20px 0px;
+  padding: 0px 0 20px 0px;
   margin: 0px;
-  font:16px/1.5 $body-fonts;
-  color:$foreground;
+  font: 16px/1.5 $body-fonts;
+  color: $foreground;
   font-weight: normal;
   background: $background;
   background-attachment: fixed !important;
   background: linear_gradient($background, lighten($background, 20%));
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $heading-fonts;
   color: $cyan;
-  margin:0 0 10px;
+  margin: 0 0 10px;
   font-weight: normal;
 }
 
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+p,
+ul,
+ol,
+table,
+pre,
+dl {
+  margin: 0 0 20px;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
+h1,
+h2,
+h3 {
+  line-height: 1.1;
 }
 
 h1 {
-  color:$green;
-  font-size:48px;
+  color: $green;
+  font-size: 48px;
   line-height: 52px;
 }
 
@@ -47,9 +59,11 @@ h3 {
   line-height: 28px;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-family: $body-fonts;
-  color:$yellow;
+  color: $yellow;
   font-weight: 600;
 }
 
@@ -58,7 +72,8 @@ h4 {
   line-height: 21px;
 }
 
-h5, h6 {
+h5,
+h6 {
   font-size: 16px;
   line-height: 18px;
 }
@@ -68,9 +83,9 @@ h6 {
 }
 
 a {
-  color:$green;
-  font-weight:400;
-  text-decoration:none;
+  color: $green;
+  font-weight: 400;
+  text-decoration: none;
 
   &:hover {
     color: darken($green, 20%);
@@ -78,15 +93,14 @@ a {
 }
 
 a small {
-  font-size:11px;
-  color:$comment;
-  margin-top:-0.6em;
-  display:block;
+  font-size: 11px;
+  color: $comment;
+  margin-top: -0.6em;
+  display: block;
 }
 
-
-ul{
-  list-style-image:url('../images/bullet.png');
+ul {
+  list-style-image: url("../images/bullet.png");
 }
 
 strong {
@@ -94,9 +108,9 @@ strong {
 }
 
 .wrapper {
-  max-width:650px;
-  margin:0 auto;
-  position:relative;
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
   padding: 0 20px;
 }
 
@@ -105,25 +119,25 @@ section img {
 }
 
 blockquote {
-  border-left:3px solid $green;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
+  border-left: 3px solid $green;
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-style: italic;
 }
 
 code {
   font-family: $mono-fonts;
-  color:$foreground;
+  color: $foreground;
   background: $current;
-  font-size:13px;
+  font-size: 13px;
   margin: 0 4px;
   padding: 4px 6px;
 }
 
 pre {
-  padding:8px 15px;
+  padding: 8px 15px;
   background: $background;
-  border:3px solid $pink;
+  border: 3px solid $pink;
   overflow: auto;
   overflow-y: hidden;
 
@@ -136,22 +150,22 @@ pre {
 }
 
 table {
-  width:100%;
-  border-collapse:collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th {
-  text-align:left;
-  padding:10px;
+  text-align: left;
+  padding: 10px;
   background: $comment;
   color: $foreground;
   font-weight: 600;
 }
 
 td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:2px solid $purple;
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 2px solid $purple;
 }
 
 hr {
@@ -163,21 +177,22 @@ hr {
 }
 
 dt {
-  color:$yellow;
+  color: $yellow;
   font-weight: 600;
 }
 
-button, a.button {
+button,
+a.button {
   color: $background;
   border: 2px solid $cyan;
   background: $cyan;
   padding: 10px 12px;
   margin-top: 6px;
-  line-height:14px;
-  font-size:14px;
+  line-height: 14px;
+  font-size: 14px;
   font-weight: bold;
-  display:inline-block;
-  text-align:center;
+  display: inline-block;
+  text-align: center;
   &:hover {
     background: $comment;
     color: $foreground;
@@ -185,10 +200,9 @@ button, a.button {
   }
 }
 
-
 #header {
   z-index: 100;
-  left:0;
+  left: 0;
   top: 0px;
   height: 60px;
   width: 100%;
@@ -216,10 +230,10 @@ button, a.button {
         background: none;
         padding: 10px 12px;
         margin-top: 6px;
-        line-height:14px;
-        font-size:14px;
-        display:inline-block;
-        text-align:center;
+        line-height: 14px;
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
 
         &:hover {
           background-color: $comment;
@@ -248,15 +262,17 @@ button, a.button {
 }
 
 section {
-  max-width:650px;
+  max-width: 650px;
   padding: 30px 0px 50px 0px;
   margin: 20px 0;
   margin-top: 70px;
-  &.no-header { margin-top: 0; }
+  &.no-header {
+    margin-top: 0;
+  }
   #title {
     border: 0;
     outline: none;
-    margin: 0 0 25px 0;
+    margin: 0 0 12px 0;
     padding: 0 0 5px 0;
     text-align: center;
     img {
@@ -271,10 +287,25 @@ section {
       color: $foreground;
       font-weight: 400;
       font-size: 24px;
+      margin: 20px 0 10px 0;
+    }
+    ul#pages {
+      list-style-image: none;
+      list-style-type: none;
+      margin: 0 0 20px 0;
+      a {
+        color: $yellow;
+        font-size: 24px;
+      }
+    }
+    hr {
+      margin: 0;
     }
   }
   #footer {
-    hr { margin-top:30px; }
+    hr {
+      margin-top: 30px;
+    }
     .credits {
       font-size: 11px;
       font-weight: normal;
@@ -283,6 +314,42 @@ section {
 
       &.left {
         float: left;
+        .social-media-container {
+          &.purple {
+            .svg-icon {
+              fill: $purple;
+            }
+          }
+          &.yellow {
+            .svg-icon {
+              fill: $yellow;
+            }
+          }
+          &.orange {
+            .svg-icon {
+              fill: $orange;
+            }
+          }
+          &.cyan {
+            .svg-icon {
+              fill: $cyan;
+            }
+          }
+          float: left;
+          margin: 0 5px;
+          a {
+            float: left;
+            height: 100%;
+            .svg-icon {
+              float: left;
+              height: 16px;
+              width: 16px;
+            }
+            span {
+              margin: 0 0 0 5px;
+            }
+          }
+        }
       }
 
       &.right {
@@ -299,22 +366,34 @@ section {
     transform: rotate(-5deg);
   }
   &:nth-child(2n) {
-    .title { transform: rotate(5deg); }
+    .title {
+      transform: rotate(5deg);
+    }
   }
-  &:nth-child(6n+1) {
-    .title { color: $cyan; }
+  &:nth-child(6n + 1) {
+    .title {
+      color: $cyan;
+    }
   }
-  &:nth-child(6n+2) {
-    .title { color: $orange; }
+  &:nth-child(6n + 2) {
+    .title {
+      color: $orange;
+    }
   }
-  &:nth-child(6n+3) {
-    .title { color: $purple; }
+  &:nth-child(6n + 3) {
+    .title {
+      color: $purple;
+    }
   }
-  &:nth-child(6n+4) {
-    .title { color: $red; }
+  &:nth-child(6n + 4) {
+    .title {
+      color: $red;
+    }
   }
-  &:nth-child(6n+5) {
-    .title { color: $pink; }
+  &:nth-child(6n + 5) {
+    .title {
+      color: $pink;
+    }
   }
   .listing {
     width: 32.32%;
@@ -323,7 +402,9 @@ section {
     padding: 0 16px;
     margin-bottom: 32px;
     vertical-align: text-top;
-    &:nth-child(3n+2) { @include clear(); }
+    &:nth-child(3n + 2) {
+      @include clear();
+    }
     a {
       display: block;
       h3 {

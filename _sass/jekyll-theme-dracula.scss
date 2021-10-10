@@ -315,6 +315,9 @@ section {
       &.left {
         float: left;
         .social-media-container {
+          &.email {
+            margin: 0;
+          }
           &.purple {
             .svg-icon {
               fill: $purple;

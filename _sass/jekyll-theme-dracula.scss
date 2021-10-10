@@ -443,6 +443,20 @@ section {
   }
 }
 
+@media print, screen and (max-width: 545px) {
+  section {
+    #footer {
+      .credits {
+        &.left {
+          .social-media-container {
+            float: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media print, screen and (max-width: 480px) {
   #header {
     margin-top: -20px;

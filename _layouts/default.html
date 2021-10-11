@@ -31,12 +31,13 @@
           </h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        <ul id="pages">
-          <li>
-          <a href="{{ site.baseurl }}{% link about.markdown %}">About</a>
-          </li>
-        </ul>
-
+          <ul id="pages">
+          {% for page in site.pages %}
+            <li>
+              <a href="{{ page.url }}">{{ page.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
           <hr>
         </div>
 

@@ -19,15 +19,12 @@ jobs:
           paths:
             - vendor/bundle
       - run:
-          name: generate tags
-          command: py --version
-      - run:
           name: Jekyll build
           command: JEKYLL_ENV=production bundle exec jekyll build
-      - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer ./_site --allow-hash-href --check-html --disable-external
+            #      - run:
+            #          name: HTMLProofer tests
+            #          command: |
+            #            bundle exec htmlproofer ./_site --allow-hash-href --check-html --disable-external
       - persist_to_workspace:
           root: ./
           paths:

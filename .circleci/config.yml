@@ -19,6 +19,9 @@ jobs:
           paths:
             - vendor/bundle
       - run:
+          name: generate tags
+          command: py --version
+      - run:
           name: Jekyll build
           command: JEKYLL_ENV=production bundle exec jekyll build
       - run:

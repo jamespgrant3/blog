@@ -31,13 +31,13 @@
           </h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-          <ul id="pages">
+          <div id="pages">
           {% for page in site.pages %}
-            <li>
+            <span class="page">
               <a href="{{ page.url }}">{{ page.title }}</a>
-            </li>
+            </span>
           {% endfor %}
-          </ul>
+          </div>
           <hr>
         </div>
 

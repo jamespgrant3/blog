@@ -289,13 +289,14 @@ section {
       font-size: 24px;
       margin: 20px 0 10px 0;
     }
-    ul#pages {
-      list-style-image: none;
-      list-style-type: none;
+    div#pages {
       margin: 0 0 20px 0;
-      a {
-        color: $yellow;
-        font-size: 24px;
+      span.page {
+        margin: 0 5px;
+        a {
+          color: $yellow;
+          font-size: 24px;
+        }
       }
     }
     hr {

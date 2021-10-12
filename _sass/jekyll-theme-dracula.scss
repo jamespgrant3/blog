@@ -100,7 +100,8 @@ a small {
 }
 
 ul {
-  list-style-image: url("../images/bullet.png");
+  list-style-image: none;
+  list-style-type: none;
 }
 
 strong {
@@ -197,6 +198,33 @@ a.button {
     background: $comment;
     color: $foreground;
     border-color: $comment;
+  }
+}
+
+.tags-container {
+  display: flex;
+  margin: 0 0 12px 0;
+  align-items: center;
+  .tag-header {
+    margin: 0;
+  }
+  .tag {
+    float: left;
+    margin: 0 10px;
+
+    a {
+      color: $orange;
+    }
+  }
+}
+
+.tag-container {
+  .tag {
+    color: $pink;
+  }
+
+  .post-list-container {
+    margin: 20px 0;
   }
 }
 

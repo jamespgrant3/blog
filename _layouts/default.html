@@ -33,9 +33,11 @@
 
           <div id="pages">
           {% for page in site.pages %}
+           {% if page.layout == 'page' %}
             <span class="page">
               <a href="{{ page.url }}">{{ page.title }}</a>
             </span>
+            {% endif %}
           {% endfor %}
           </div>
           <hr>

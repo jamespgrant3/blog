@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% if page.tags.size > 0 %}
+<div class="tags-container">
+  <div>
+    <h3 class="tag-header">Tags:</h3>
+  </div>
+  <div>
+    <ul>
+      {% for tag in page.tags %}
+      <li class="tag">
+        <a href="/tag/{{ tag }}">#{{ tag }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<hr />
+{% endif %}
+
+{{ content }}

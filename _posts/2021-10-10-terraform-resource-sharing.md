@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "terraform resource sharing"
-tags: api-gateway terraform serverless-framework
+tags: api-gateway aws serverless-framework terraform
 ---
 As part of a replatforming effort, I was recently tasked with exposing a bunch of lambdas to the world. The obvious solution was an `api-gateway`. In looking at how this was achieved in the current architecture: a serverless stack was created, a bunch of lambdas were attached, and the serverless stack was deployed.
 

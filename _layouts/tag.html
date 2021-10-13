@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="tag-container">
-  <h3>Posts for <span class="tag">#{{ page.tag }}<span></h3>
+  <h3>Posts about <span class="tag">#{{ page.tag }}<span></h3>
   <ul class="post-list-container">
     {% for post in site.tags[page.tag] %}
     <li>

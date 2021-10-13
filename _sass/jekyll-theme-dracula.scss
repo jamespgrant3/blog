@@ -449,6 +449,10 @@ section {
   @include clearfix();
 }
 
+.money-green {
+  color: $green;
+}
+
 @media print, screen and (max-width: 720px) {
   #title {
     .credits {

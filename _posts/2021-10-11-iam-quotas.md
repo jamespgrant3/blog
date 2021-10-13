@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "iam quotas"
-tags: iam
+tags: aws iam
 ---
 When initially setting up our deployment pipeline to deploy using `terraform`, I really wanted to follow best practice and employ the least privilege principle. So `terraform` only had permissions to do what it absolutely had to.
 

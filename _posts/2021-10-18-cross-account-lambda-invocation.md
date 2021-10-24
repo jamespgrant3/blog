@@ -3,6 +3,7 @@ layout: post
 title: cross account lambda invocation
 tags: aws lambda
 ---
+### cross account lambda invocation
 I've known that you can invoke lambdas cross-account, but I have never actually implemented one, until this week. It's really easy. In this example, `account-a` will be the account that owns the lambda, and `account-b` will be the account calling the lambda.
 
 Lambdas allow for resource policies to be attached. I attached a resource policy specifying that a specific principal (role) from `account-b`, could `InvokeFunction` on a specific lambda, like this:

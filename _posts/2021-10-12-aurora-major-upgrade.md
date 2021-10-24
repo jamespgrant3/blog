@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "aurora major upgrade, 12.4 to 13.3"
+title:  aurora major upgrade, 12.4 to 13.3
 tags: aurora aws postgres rds
 ---
+### aurora major upgrade, 12.4 to 13.3
 For the last few weeks I have been attempting to upgrade our lower environment `aurora` instances from Postgres 12.4 to 13.3. There's no dire need. I mainly just want to understand what a major aurora upgrade looks like, document, and plan accordingly. Our little glitter bombs currently run on `r5.large` instances.
 
 Well, according to the [upgrade docs](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.PostgreSQL.html), you just **DO** the upgrade. I would somewhat expect for it to be a simple process....it's aurora.

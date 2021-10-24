@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "terraform resource sharing"
+title:  terraform resource sharing
 tags: api-gateway aws serverless-framework terraform
 ---
+### terraform resource sharing
 As part of a replatforming effort, I was recently tasked with exposing a bunch of lambdas to the world. The obvious solution was an `api-gateway`. In looking at how this was achieved in the current architecture: a serverless stack was created, a bunch of lambdas were attached, and the serverless stack was deployed.
 
 What may not be too obvious here, is that if you don't specify an `apiGateway` in your serverless framework config file, the framework will create an `api-gateway` for you. So over time you could potentially end up with a handful of gateways, each of which have its endpoint hardcoded in a config file somewhere. 🤢

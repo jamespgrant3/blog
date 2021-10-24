@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "iam quotas"
+title:  iam quotas
 tags: aws iam
 ---
+### iam quotas
 When initially setting up our deployment pipeline to deploy using `terraform`, I really wanted to follow best practice and employ the least privilege principle. So `terraform` only had permissions to do what it absolutely had to.
 
 I quickly created a `deploy` role, and went to work attaching policies. In an effort to stay somewhat organized and appear to know what I was doing, I created a policy per resource. So when we created an aurora instance, I attached an `rds` policy with its permissions, load-balancer permissions were found in an `alb` policy.

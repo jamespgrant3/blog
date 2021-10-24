@@ -3,6 +3,7 @@ layout: post
 title: fargate ecs scaling
 tags: aws ecs fargate
 ---
+### fargate ecs scaling
 A few months ago in a technical discussion, I was asked about scaling limitations of EFS Fargate. They got me, deer in headlights. Clearly, they knew I was an imposter before the discussion even began. I just couldn't think of anything.
 
 I did know about ECS, fargate, and the recommended `awsvpc` networking mode. I just couldn't think of any scaling limitations. Fast-forward to last week, when I needed to attach a lambda to the ole vpc. I started researching downsides to scalability, why were lambda cold-starts such a big deal. Turns out, it's mostly attributed to an eni being allocated to the lambda.

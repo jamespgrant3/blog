@@ -3,7 +3,7 @@ layout: post
 title: iam actions, resources, & conditions
 tags: aws iam
 ---
-
+### iam actions, resources, & conditions
 This post started off as a paragraph, but I really wanted to illustrate one of my favorite iam resources and how I navigate it. I 💖 [this](https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html) page. I literally use this hidden gem **every day**. I learned about this page by watching an [iam re:invent talk](https://www.youtube.com/watch?v=YQsK4MtsELU).
 
 This page lists every aws service, and any iam actions possible for the service. It provides a table of all actions, resources, conditions, and even dependent actions.

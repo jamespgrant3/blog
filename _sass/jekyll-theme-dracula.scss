@@ -100,8 +100,11 @@ a small {
 }
 
 ul {
-  list-style-image: none;
-  list-style-type: none;
+  &.no-bullets,
+  &.post-list {
+    list-style-image: none;
+    list-style-type: none;
+  }
 }
 
 strong {

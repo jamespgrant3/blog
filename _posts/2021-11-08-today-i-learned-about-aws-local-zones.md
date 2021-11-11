@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "today i learned about: aws local zones"
+title: "today I learned about: aws local zones"
 tags: aws compute local-zones
 ---
 ### today i learned about: aws local zones

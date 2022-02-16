@@ -9,7 +9,7 @@ States are the basic building block of the state machine. They must have a name 
 
 There are a variety of different types of states.
 
-### States 
+### States
 #### Task
 - all work is done by tasks
 - represents a single unit of work within the state machine

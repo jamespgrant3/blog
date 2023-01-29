@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,15 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: jamespgrant3 
+title: jamespgrant3
 email: jamespgrant3@gmail.com
 description: >-
-  learning cloud, as I pretend to be a cloud architect
+  A passionate learner, cloud architect, full-stack developer, and command-line enthusiast
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jamespgrant3 
-github_username: jamespgrant3 
-linkedin_username: jamespgrant3 
+twitter_username: jamespgrant3
+github_username: jamespgrant3
+linkedin_username: jamespgrant3
 google_analytics: G-7EE05BNPDH
 # Build settings
 theme: minima

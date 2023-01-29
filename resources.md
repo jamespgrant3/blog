@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resources 
+title: Resources
 permalink: /resources/index.html
 ---
 A few resources I follow.
@@ -12,6 +12,10 @@ A few resources I follow.
 
 [cloudonaut](https://cloudonaut.io/)
 
+### youtube
+[theprimeagen](https://www.youtube.com/@ThePrimeagen)
+[teej](https://www.youtube.com/@teej_dv)
+
 ### podcasts
 [aws podcast](https://aws.amazon.com/podcasts/aws-podcast/?podcast-list.sort-by=item.additionalFields.EpisodeNum&podcast-list.sort-order=desc&awsf.episode-type=*all&awsf.tech-category-filter=*all&awsf.product-filter=*all&awsf.industry-filter=*all)
 
@@ -20,6 +24,10 @@ A few resources I follow.
 [the cloud pod](https://www.thecloudpod.net/)
 
 [aws developers podcast](https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5zb3VuZGNsb3VkLmNvbS91c2Vycy9zb3VuZGNsb3VkOnVzZXJzOjk5NDM2MzU0OS9zb3VuZHMucnNz)
+
+[aws bites](https://awsbites.com/)
+
+[cloud security podcast](https://cloudsecuritypodcast.tv/)
 
 [day 2 cloud](https://daytwocloud.io/)
 

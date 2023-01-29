@@ -14,6 +14,7 @@ A few resources I follow.
 
 ### youtube
 [theprimeagen](https://www.youtube.com/@ThePrimeagen)
+
 [teej](https://www.youtube.com/@teej_dv)
 
 ### podcasts

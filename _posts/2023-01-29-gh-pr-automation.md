@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "automate creating pull requests"
-tags: git automation
+tags: git automation productivity
 ---
 ### automate creating a pull request using the github cli
 Did you know that github has a cli? I didn't for a while, but once I found out I started automating every interaction with the tool. My goal is to stay within tmux as much as possible. I'm faster with my fingers, less switching = more productivity.

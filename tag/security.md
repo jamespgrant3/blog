@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: security"
+title: "tag: security"
 tag: security
 robots: noindex
 ---

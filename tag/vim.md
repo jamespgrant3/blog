@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: vim"
+title: "tag: vim"
 tag: vim
 robots: noindex
 ---

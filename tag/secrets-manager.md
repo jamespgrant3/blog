@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: secrets-manager"
+title: "tag: secrets-manager"
 tag: secrets-manager
 robots: noindex
 ---

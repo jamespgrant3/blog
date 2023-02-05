@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: serverless"
+title: "tag: serverless"
 tag: serverless
 robots: noindex
 ---

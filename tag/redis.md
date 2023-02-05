@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: redis"
+title: "tag: redis"
 tag: redis
 robots: noindex
 ---

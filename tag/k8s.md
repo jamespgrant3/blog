@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: k8s"
+title: "tag: k8s"
 tag: k8s
 robots: noindex
 ---

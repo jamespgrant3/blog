@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: database"
+title: "tag: database"
 tag: database
 robots: noindex
 ---

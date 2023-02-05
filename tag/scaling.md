@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: scaling"
+title: "tag: scaling"
 tag: scaling
 robots: noindex
 ---

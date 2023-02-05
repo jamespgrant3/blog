@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: postgres"
+title: "tag: postgres"
 tag: postgres
 robots: noindex
 ---

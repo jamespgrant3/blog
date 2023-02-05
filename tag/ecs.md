@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: ecs"
+title: "tag: ecs"
 tag: ecs
 robots: noindex
 ---

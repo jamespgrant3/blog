@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: rds"
+title: "tag: rds"
 tag: rds
 robots: noindex
 ---

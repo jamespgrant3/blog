@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: tmux"
+title: "tag: tmux"
 tag: tmux
 robots: noindex
 ---

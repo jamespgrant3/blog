@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: mfa"
+title: "tag: mfa"
 tag: mfa
 robots: noindex
 ---

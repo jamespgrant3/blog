@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: cloudtrail"
+title: "tag: cloudtrail"
 tag: cloudtrail
 robots: noindex
 ---

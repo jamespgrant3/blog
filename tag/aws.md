@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: aws"
+title: "tag: aws"
 tag: aws
 robots: noindex
 ---

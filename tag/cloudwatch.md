@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: cloudwatch"
+title: "tag: cloudwatch"
 tag: cloudwatch
 robots: noindex
 ---

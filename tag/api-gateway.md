@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: api-gateway"
+title: "tag: api-gateway"
 tag: api-gateway
 robots: noindex
 ---

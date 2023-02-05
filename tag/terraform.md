@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: terraform"
+title: "tag: terraform"
 tag: terraform
 robots: noindex
 ---

@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: organizations"
+title: "tag: organizations"
 tag: organizations
 robots: noindex
 ---

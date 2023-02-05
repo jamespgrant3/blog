@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: productivity"
+title: "tag: productivity"
 tag: productivity
 robots: noindex
 ---

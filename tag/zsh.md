@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: zsh"
+title: "tag: zsh"
 tag: zsh
 robots: noindex
 ---

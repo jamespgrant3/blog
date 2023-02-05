@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: fargate"
+title: "tag: fargate"
 tag: fargate
 robots: noindex
 ---

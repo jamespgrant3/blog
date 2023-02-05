@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: "Tag: vpc"
+title: "tag: vpc"
 tag: vpc
 robots: noindex
 ---

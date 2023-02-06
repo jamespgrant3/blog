@@ -456,6 +456,10 @@ section {
   color: $green;
 }
 
+.home > .page-heading {
+  display: none;
+}
+
 @media print, screen and (max-width: 720px) {
   #title {
     .credits {

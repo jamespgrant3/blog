@@ -23,3 +23,9 @@ Tomorrow I hope to start getting the apis to call one another and begin to docke
 _Update: 02-08-2023_
 
 I was able to get the two api's communicating. So a call to the `/users` endpoint in the api is calling the `/` endpoint on the user-api. Given the new moonlander board, it's taking a little more time than I thought. Next step, dockerizing.
+
+_Update: 02-09-2023_
+
+I was able to get both api's dockerized, check it out [here](https://github.com/jamespgrant3/eks-practice/commit/d4c8ca5a6503ececa0109fd8c338a7804d8b1c1c). Since I had written a post about distroless images, I decided to use it. They actually have several good [base images](https://github.com/GoogleContainerTools/distroless#what-images-are-available), with runtimes already installed. It was surprisingly little effort, the biggest hurdle was around docker networking.
+
+Looking forward to starting the EKS work tomorrow!

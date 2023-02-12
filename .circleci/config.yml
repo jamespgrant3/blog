@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@3.1.4
 jobs:
   deploy:
     docker:
@@ -6,9 +8,7 @@ jobs:
     environment:
       S3_BUCKET_NAME: jamespgrant3.com
     steps:
-      - run:
-          name: aws cli
-          command: pip install awscli --upgrade --user
+      - aws-cli/setup
       - run:
           name: nextjs build
           command: npm run deploy

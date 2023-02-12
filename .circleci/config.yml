@@ -19,7 +19,7 @@ jobs:
           command: npm run deploy
       - run:
           name: upload to s3
-          command: ~/.local/bin/aws s3 sync ./out s3://$S3_BUCKET_NAME/ --delete
+          command: aws s3 sync ./out s3://$S3_BUCKET_NAME/ --delete
       - run:
           name: invalidate cloudfront distribution
           command: |

@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "deploy": "rm -rf ./out && npm run build && npm run export",
+    "export": "next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "gray-matter": "^4.0.3",
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-ga4": "^2.0.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1"
+  },
+  "devDependencies": {
+    "highlight.js": "^11.7.0"
+  }
+}

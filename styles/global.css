@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+pre {
+  padding: 8px 15px;
+  background: #282a36;
+  overflow: auto;
+  overflow-y: auto;
+  overflow-y: hidden;
+}
+
+pre > code {
+  color: #f8f8f2;
+  background: #282a36;
+  margin: 0;
+  padding: 0;
+}
+
+p > code {
+  color: #f8f8f2;
+  background: #44475a;
+  font-size: 13px;
+  margin: 0 2px;
+  padding: 4px;
+}

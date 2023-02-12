@@ -1,50 +1,22 @@
 version: 2.1
 jobs:
-  build:
-    docker:
-      - image: cimg/ruby:2.7.4
-    environment:
-      BUNDLE_PATH: ~/repo/vendor/bundle
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - rubygems-v1-{{ checksum "Gemfile.lock" }}
-            - rubygems-v1-fallback
-      - run:
-          name: Bundle Install
-          command: bundle check || bundle install
-      - save_cache:
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-      - run:
-          name: Jekyll build
-          command: JEKYLL_ENV=production bundle exec jekyll build
-            #      - run:
-            #          name: HTMLProofer tests
-            #          command: |
-            #            bundle exec htmlproofer ./_site --allow-hash-href --check-html --disable-external
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - _site
   deploy:
     docker:
-      - image: cimg/python:3.9.1
+      - image: cimg/node:18.13.0
     environment:
       S3_BUCKET_NAME: jamespgrant3.com
     steps:
-      - attach_workspace:
-          at: ./
       - run:
-          name: Install AWS CLI
+          name: aws cli
           command: pip install awscli --upgrade --user
       - run:
-          name: Upload to s3
-          command: ~/.local/bin/aws s3 sync ./_site s3://$S3_BUCKET_NAME/ --delete
+          name: nextjs build
+          command: npm run deploy
       - run:
-          name: Invalidate Cloudfront Distribution
+          name: upload to s3
+          command: ~/.local/bin/aws s3 sync ./out s3://$S3_BUCKET_NAME/ --delete
+      - run:
+          name: invalidate cloudfront distribution
           command: |
             aws cloudfront create-invalidation \
             --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text) \
@@ -52,13 +24,7 @@ jobs:
 workflows:
   blog-deploy:
     jobs:
-      - build:
-          filters:
-            branches:
-              only: master 
       - deploy:
-          requires:
-            - build
           filters:
             branches:
-              only: master 
+              only: refactor

@@ -34,6 +34,6 @@ _Update: 02-14-2023_
 
 Today, I was able to scaffold out the EKS role and cluster, see [here](https://github.com/jamespgrant3/eks-practice/commit/d86f2908a7627c8d9753f5675460657c78709b7e). I am not super familiar with CloudFormation, so it took a little extra time this morning to get my head around it. No major opinions yet, as everything I am doing is really simplistic.
 
-I also pushed up the two images to DockerHub. You can see both images [here](https://hub.docker.com/jamespgrant).
+I also pushed up the two images to DockerHub. You can see both images [here](https://hub.docker.com/search?q=jamespgrant3).
 
 My next steps are to start getting pods in the cluster, and figuring out how to manage the cluster locally.

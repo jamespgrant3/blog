@@ -29,3 +29,11 @@ _Update: 02-09-2023_
 I was able to get both api's dockerized, check it out [here](https://github.com/jamespgrant3/eks-practice/commit/d4c8ca5a6503ececa0109fd8c338a7804d8b1c1c). Since I had written a post about distroless images, I decided to use it. They actually have several good [base images](https://github.com/GoogleContainerTools/distroless#what-images-are-available), with runtimes already installed. It was surprisingly little effort, the biggest hurdle was around docker networking.
 
 Looking forward to starting the EKS work tomorrow!
+
+_Update: 02-14-2023_
+
+Today, I was able to scaffold out the EKS role and cluster, see [here](https://github.com/jamespgrant3/eks-practice/commit/d86f2908a7627c8d9753f5675460657c78709b7e). I am not super familiar with CloudFormation, so it took a little extra time this morning to get my head around it. No major opinions yet, as everything I am doing is really simplistic.
+
+I also pushed up the two images to DockerHub. You can see both images [here](https://hub.docker.com/jamespgrant).
+
+My next steps are to start getting pods in the cluster, and figuring out how to manage the cluster locally.

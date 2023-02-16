@@ -38,3 +38,13 @@ Today, I was able to scaffold out the EKS role and cluster, see [here](https://g
 I also pushed up the two images to DockerHub. You can see both images [here](https://hub.docker.com/search?q=jamespgrant3).
 
 My next steps are to start getting pods in the cluster, and figuring out how to manage the cluster locally.
+
+_Update: 02-15-2023_
+
+Today wasn't too productive. I was able to get `kubectl` installed, and ran a command to update my local config to point to my eks cluster:
+
+```sh
+aws eks update-kubeconfig --region us-east-1 --name k8s-practice
+```
+
+This command added a `config` file to my `$HOME/.kube` directory.

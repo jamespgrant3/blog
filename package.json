@@ -5,6 +5,7 @@
     "dev": "next dev",
     "deploy": "rm -rf ./out && npm run build && npm run export",
     "export": "next export",
+    "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {
@@ -18,6 +19,8 @@
     "remark-html": "^15.0.1"
   },
   "devDependencies": {
+    "eslint-config-next": "13.1.6",
+    "eslint-config-prettier": "^8.6.0",
     "highlight.js": "^11.7.0"
   }
 }

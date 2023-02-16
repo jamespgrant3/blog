@@ -23,6 +23,10 @@ export default function Home({ allPosts }) {
       </section>
       <hr />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <p>
+          Current ongoing learnings:{" "}
+          <Link href={`/posts/practice-eks-thread`}>eks</Link>
+        </p>
         <h2 className={utilStyles.headingLg}>Posts</h2>
         <ul className={utilStyles.list}>
           {allPosts.map(({ id, date, title }) => (

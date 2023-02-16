@@ -2,8 +2,9 @@
 layout: post
 title: "lambda event source mapping"
 tags: [aws, lambda]
-date: '2023-02-01'
+date: "2023-02-01"
 ---
+
 As you may already know, AWS made some concurrency changes around sqs and lambda invocations. To better understand these changes, I wanted to better understand event source mapping (ESM).
 
 Event source mapping is used to invoke a lambda, from some event in a handful of AWS services. A few of the support services are: dynamodb, kinesis, and sqs.

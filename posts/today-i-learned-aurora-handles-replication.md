@@ -2,8 +2,9 @@
 layout: post
 title: "today I learned: aurora handles replication"
 tags: [aurora, aws, terraform]
-date: '2021-11-05'
+date: "2021-11-05"
 ---
+
 As part of my cute little production readiness chores, I want to enable replication. While reading through [this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/rds_cluster_instance) terraform document, I saw this:
 
 > Unlike other RDS resources that support replication, with Amazon Aurora you do not designate a primary and subsequent replicas. Instead, you simply add RDS Instances and Aurora manages the replication.

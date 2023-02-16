@@ -2,8 +2,9 @@
 layout: post
 title: re-cidr a vpc
 tags: [aws, vpc]
-date: '2022-02-27'
+date: "2022-02-27"
 ---
+
 My initial task at my current employer was to create a more manageable and scalable infrastructure for our product to run on. As I have mentioned several times, we chose terraform as our IaC solution.
 
 The effort for the re-infrastructure was built into a large feature. We wanted to go multi-account and this feature was to have its own database. We were going to combine the two worlds at a later time. Fast forward, and now we're starting this migration process to combine the two databases.

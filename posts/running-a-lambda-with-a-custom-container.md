@@ -2,8 +2,9 @@
 layout: post
 title: running a custom container in a lambda
 tags: [aws, container, lambda]
-date: '2022-11-03'
+date: "2022-11-03"
 ---
+
 I have been in automation-mode for a few months now at work. I want to automate as many of my tedious responsibilities as possible.
 
 One of these tasks is running hasura migrations. Developers create migration scripts, and until now, this has been a manual step in the deployment. Coupled with several development environments, this task is time consuming and HAS to be automated.
@@ -21,6 +22,7 @@ After a lot of fighting, I basically copied the example from `aws-lambda-ric`, a
 The next issue I encountered were permissions issues around `/home/sbx_user1051`. The hasura-cli runs under a user, `sbx_user1051`. So I ran the container under that user, and symlinked `/tmp` to the appropriate directory.
 
 The final issue was around ssl certificates, I was receiving the following error: `x509: certificate signed by unknown authority`. A coworker suggested pushing the root CA's into the container. The solution:
+
 - install `ca-certificates` in the container
 - get the AWS root CA's, [here](https://www.amazontrust.com/repository/)
 - place them where docker expects them, [here](https://docs.docker.com/engine/security/certificates/)

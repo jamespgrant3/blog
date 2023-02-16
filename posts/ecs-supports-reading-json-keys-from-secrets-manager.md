@@ -2,8 +2,9 @@
 layout: post
 title: ecs supports reading json keys from secrets manager
 tags: [aws, ecs, secrets-manager]
-date: '2021-10-23'
+date: "2021-10-23"
 ---
+
 **tl;dr**: ecs supports reading json keys from secrets manager, see the [feature release](https://aws.amazon.com/about-aws/whats-new/2020/02/amazon-ecs-now-supports-aws-secrets-manager-version-and-json-keys/).
 
 We recently implemented secrets rotation for our postgres database. One of the unintended consequences of doing so was figuring out how our hasura ecs tasks could continue to connect post-rotation.
@@ -13,6 +14,7 @@ The way [connections](https://hasura.io/docs/latest/graphql/core/deployment/grap
 We were already storing everything needed for the connection string to be constructed within the secret that was being rotated. So, we decided to add a `connectionString` property to the secret. But, how would we update the task cleanly?
 
 Secret definition:
+
 ```terraform
 resource "aws_secretsmanager_secret" "postgres_hasura_user" {
   name  = "postgres/user/hasura"
@@ -28,14 +30,18 @@ resource "aws_secretsmanager_secret_version" "postgres_hasura_user" {
   })
 }
 ```
+
 As it turns out, you can reference the json property by appending the json key to the arn. So, we updated the task definition to reference this arn...like so:
+
 ```terraform
 resource "aws_ecs_task_definition" "hasura_devops" {
   container_definitions = templatefile("${path.module}/hasura.json", {
     postgres_connection_string = "${aws_secretsmanager_secret.postgres_hasura_user.arn}:connectionString::",
 }
 ```
+
 Our container definition then pulls the `valueFrom` the arn:
+
 ```json
 [
   {
@@ -48,6 +54,7 @@ Our container definition then pulls the `valueFrom` the arn:
   }
 ]
 ```
+
 Finally, in the lambda that was doing the rotation, we just made an aws cli call to update the ecs service to use the new connections string.
 
 `aws ecs update-service --cluster our-cluster --service hasura --force-new-deployment`

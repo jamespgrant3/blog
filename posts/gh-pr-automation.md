@@ -2,8 +2,9 @@
 layout: post
 title: "automate creating a pull request using the github cli"
 tags: [git, automation, productivity]
-date: '2023-01-29'
+date: "2023-01-29"
 ---
+
 Did you know that github has a cli? I didn't for a while, but once I found out I started automating every interaction with the tool. My goal is to stay within tmux as much as possible. I'm faster with my fingers, less switching = more productivity.
 
 You can find the instructions to install the cli [here](https://github.com/cli/cli#installation). Next, I would recommend [creating a github team](https://docs.github.com/en/organizations/organizing-members-into-teams/creating-a-team) within the organization. This allows us to assign the reviewer of the pull request to a team. Within github, you can assign users to the team.
@@ -30,6 +31,7 @@ cpr() {
   -b $3
 }
 ```
+
 This script accepts three parameters. The base branch, which is the branch you are merging into, the title of the pull request, and the body of the pull request. What you get for free, is who the pull request is assigned to as the reviewer and the assignee. `@me` assigns the pull request to you.
 
 Usage would look something like this, assuming you were merging into the `master` branch:
@@ -38,7 +40,7 @@ Usage would look something like this, assuming you were merging into the `master
 cpr master "the title of the pull request" "the body of the pull request"
 ```
 
-Want to create a draft pull request? It's the  same command, just append the `--draft` parameter. It would look like this:
+Want to create a draft pull request? It's the same command, just append the `--draft` parameter. It would look like this:
 
 ```sh
 # create pull request draft
@@ -57,6 +59,7 @@ cprd() {
 ```
 
 Usage:
+
 ```sh
 cprd master "the title of the pull request" "the body of the pull request"
 ```

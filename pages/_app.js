@@ -1,5 +1,5 @@
-import '../styles/global.css'
-import {useRouter} from 'next/router'
+import "../styles/global.css";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
   // hack to get around s3 redirect rule, to avoid access denied errors on refresh
@@ -11,5 +11,5 @@ export default function App({ Component, pageProps }) {
     router.replace(path);
   }
 
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }

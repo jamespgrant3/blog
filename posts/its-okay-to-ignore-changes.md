@@ -2,11 +2,13 @@
 layout: post
 title: it's okay to ignore changes
 tags: [aws, terraform]
-date: '2021-11-07'
+date: "2021-11-07"
 ---
+
 As I mentioned in a [previous post]({% post_url 2021-10-10-terraform-resource-sharing %}), we use terraform to deploy our api-gateway and attach routes to it using the serverless framework.
 
 The way our build works currently:
+
 - terraform deploys/updates api-gateway
 - downstream, serverless framework attaches resources to the gateway
 

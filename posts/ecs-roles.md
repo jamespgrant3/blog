@@ -2,8 +2,9 @@
 layout: post
 title: ecs roles
 tags: [aws, ecs]
-date: '2021-10-22'
+date: "2021-10-22"
 ---
+
 Have you ever been working with an ecs task and wondered, what is the difference between the execution role, and the task role?
 
 In my case, I am using a publicly available image, and have only attached a task role to the task. Well, this week, I wanted to attach my cli to a container, and instantly ran into issues. This is when I was forced to learn the difference between the two.

@@ -2,8 +2,9 @@
 layout: post
 title: cross-account dns
 tags: [aws, r53]
-date: '2022-02-09'
+date: "2022-02-09"
 ---
+
 To many, this is probably stating the obvious, but initially it wasn't to me.
 
 I have been working hard to re-platform our products infrastructure at work. In lower environments, we just registered a new domain name. This has worked great. However, in prod, we must preserve our product URL. How can we do this? Our domain is registered in one AWS account, and our site and api calls are in another. But....until we've migrated everything over, we also have endpoints in our legacy aws account that we must be able to communicate with.

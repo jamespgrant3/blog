@@ -2,8 +2,9 @@
 layout: post
 title: dhcp
 tags: [aws, vpc]
-date: '2022-03-06'
+date: "2022-03-06"
 ---
+
 We have a very brittle setup in our lower legacy environments, in that we have an ec2 instance that serves multiple purposes. Well, it used to. Now, it's essentially a nat gateway.
 
 However, when it hiccups, entire lower environments go down...so ideally we want to get rid of it asap. Here is how it's set up.

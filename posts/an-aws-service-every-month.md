@@ -2,8 +2,9 @@
 layout: post
 title: An AWS Service Every Month
 tags: [aws, services]
-date: '2021-11-22'
+date: "2021-11-22"
 ---
+
 As hours turn into days, and days turn into weeks...I find myself learning a lot. However, there are some core services within AWS that I should know, but don't. Maybe I know more than I think I know, but I won't know until I do a deep dive.
 
 So starting December 1, I will do a deep dive on an aws service every month, focusing on the fundamentals: compute, storage, database, networking & security. A goal being to post something interesting about the service as I learn throughout the week. Some services, like KMS, I might double up with another service I could learn in 2 weeks.

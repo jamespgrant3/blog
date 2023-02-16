@@ -2,8 +2,9 @@
 layout: post
 title: "moonlander"
 tags: [productivity]
-date: '2023-02-07'
+date: "2023-02-07"
 ---
+
 Today, I received a new toy, the [moonlander](https://www.zsa.io/moonlander). Wow, it is amazing!!! I feel like I am learning vim all over again. I only have my `tmux` shortcut key programmed, but I am already so productive.
 
 I think my biggest hurdle right now is that I was a right-handed space presser, now the space bar is exclusively on the left. While I could remap the key, I think I like the default mappings. The columnar layout is also taking some getting used to. I give it a week and I will be good.

@@ -4,10 +4,10 @@ import Link from "next/link";
 
 export const siteTitle = "jamespgrant3.com";
 
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 export default function Layout({ children, home }) {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +29,9 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link onClick={() => router.back()} href="/">← Back</Link>
+          <Link onClick={() => router.back()} href="/">
+            ← Back
+          </Link>
         </div>
       )}
     </div>

@@ -2,8 +2,9 @@
 layout: post
 title: "private api gateway"
 tags: [aws, api-gateway]
-date: '2023-01-27'
+date: "2023-01-27"
 ---
+
 This week, we worked to migrate a critical service within our application. Currently, this service is served as a container within our Docker swarm. However, we migrated it to run within a Lambda. It is really important that this service remains private in production. However, developers like for it to be public in lower environments, for debugging.
 
 I did some research. I saw documentation basically stating to lock down the gateway like this. You create a vpc endpoint to keep all the traffic internal to the vpc, and you also update the api-gateway's resource policy to only allow traffic from only the vpc endpoint. This makes complete sense.
@@ -45,6 +46,7 @@ Currently, we have one api-gateway that we attach every lambda to. My initial th
   }
 }
 ```
+
 As you can see, the first statement allows all traffic, the second conditionally puts an explicit deny on the security endpoint when the traffic does not originate from the vpc, and the final statement conditionally puts an allow on the security endpoint when the traffic does originate from within the vpc.
 
 Once you create the vpc endpoint, you access the gateway through the following url: `https://{rest-api-id}-{vpce-id}.execute-api.{region}.amazonaws.com/{stage}`. I could not get this to work. The deny should only be applied when the traffic is external, and the allow should only be applied with the traffic is internal.
@@ -70,6 +72,7 @@ We now have two api-gateways. One for public, application services. The other fo
   }
 }
 ```
+
 Accessing the endpoint using the url above, worked beautifully. I can not stand ugly urls, and luckily route53 supports `A` records with an alias to the vpc endpoint, so I am currently cleaning this us.
 
 To solve being able to access this private api-gateway in lower environments, I updated the resource policy. I added a statement that allows connectivity from our ip-sec vpn servers. These are servers that our developers connect to to gain access to private resources. So the solution fits right in with their everday workflow.

@@ -1,6 +1,7 @@
 ---
 title: about
 ---
+
 I am currently working as a Platform Architect with a fintech company here in Richmond, VA. I am a husband to one, and a father to four.
 
 I started my tech career back in 2008, as a .NET developer with absolutely **NO** interests in JavaScript or front-end development. The love was destined to be and in 2012 I started front-end development, primarily using Angular and React. As most JS folks do, I shifted backend interests to Node and quickly found myself doing full-stack JS development for many years.
@@ -12,9 +13,11 @@ Writing IaC and seeing cloud resources deployed, did to me what taking mockups t
 As a test to my learnings, I obtained the Solutions Architect Associate certification in November of 2021.
 
 ### Certifications
+
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cd3fe4f8-ffea-4f65-962c-d15b20325783" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 ### Interests
+
 - Cloud (AWS)
 - Vim
 - Cycling
@@ -22,4 +25,5 @@ As a test to my learnings, I obtained the Solutions Architect Associate certific
 - Hiking
 
 ### Blog Tech
+
 This site hosts static content on s3 and is fronted by cloudfront. I am currently using nextjs, and a few packages, to generate the static content from markdown files. This site is deployed using circle-ci.

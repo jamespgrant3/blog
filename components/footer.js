@@ -11,7 +11,7 @@ export default function Footer({ title }) {
 export async function getStaticProps() {
   return {
     props: {
-      title
-    }
-  }
+      title,
+    },
+  };
 }

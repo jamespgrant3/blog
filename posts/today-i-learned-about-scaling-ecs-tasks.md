@@ -2,8 +2,9 @@
 layout: post
 title: "today I learned about: scaling ecs tasks"
 tags: [aws, ecs, scaling]
-date: '2021-11-10'
+date: "2021-11-10"
 ---
+
 Another task I have had in the ole backlog for production readiness, was setting up our hasura ecs tasks to scale. In doing this, I leared about `application-autoscaling`. The first step is setting up a target. In doing so, you specify a `role_arn`. If you don't, terraform will create a service role for you.
 
 I like being explicit, and having as much control over infrastructure and permissions as possible. I started off with an empty role, and through using terraform, the cli gave me **very** clear exceptions as to what permissions were missing. In the end, my auto-scaling permission looked like this:

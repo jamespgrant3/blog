@@ -2,8 +2,9 @@
 layout: post
 title: "firefox multi-account containers"
 tags: [productivity]
-date: '2023-01-31'
+date: "2023-01-31"
 ---
+
 Ever had the need to be in several aws consoles at the same time? As you toggle between the two browser windows, or tabs, frustration grows because your last session seems to follow you between tabs!?
 
 So frustrating!!!

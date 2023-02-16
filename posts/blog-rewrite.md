@@ -1,9 +1,10 @@
 ---
 layout: post
 title: blog rewrite
-tags: ['javascript']
-date: '2023-02-13'
+tags: ["javascript"]
+date: "2023-02-13"
 ---
+
 This weekend, I took the time to rewrite my blog from Jekyll to NextJS.
 
 The inspiration here was for DX, and maintainability.

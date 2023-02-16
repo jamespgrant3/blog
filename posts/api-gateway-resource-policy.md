@@ -2,8 +2,9 @@
 layout: post
 title: api-gateway resource policy
 tags: [api-gateway]
-date: '2022-05-31'
+date: "2022-05-31"
 ---
+
 I recently had a request to only allow an endpoint on our api-gateway to be called from a certain subset of ip addresses. After a little research, I found out it is possible using a resource based policy on the api-gateway.
 
 You can even filter down to the http verb/resource path. The api-gateway resource arn format looks something like this:

@@ -2,8 +2,9 @@
 layout: post
 title: aurora iam authentication
 tags: [aws, iam, rds]
-date: '2022-02-28'
+date: "2022-02-28"
 ---
+
 Ever read the docs for authenticating using IAM for aurora? Specifically around IAM connect permissions? Like [this](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.IAMPolicy.html) blog post, or [this](https://aws.amazon.com/premiumsupport/knowledge-center/rds-postgresql-connect-using-iam/) one, or [this](https://catalog.us-east-1.prod.workshops.aws/workshops/2a5fc82d-2b5f-4105-83c2-91a1b4d7abfe/en-US/2-foundation/lab8-dbatasks/task1) one.
 
 You'll find that they all say you just have to provide `rds-db:connect` with the appropriate `resource`, and you can connect. Well, my experience was not that easy.
@@ -27,18 +28,16 @@ With this, I was ready to create my IAM policy, just as all the docs say to do:
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "rds-db:connect"
-            ],
-            "Resource": [
-                "arn:aws:rds-db:us-east-1:<account-id>:dbuser:<cluster-identifier>/iam_rds_poc"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["rds-db:connect"],
+      "Resource": [
+        "arn:aws:rds-db:us-east-1:<account-id>:dbuser:<cluster-identifier>/iam_rds_poc"
+      ]
+    }
+  ]
 }
 ```
 
@@ -58,19 +57,16 @@ So, `rds-db:connect` was **NOT** enough. So, knowing I was doing database things
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "rds-db:connect",
-                "rds:*"
-            ],
-            "Resource": [
-                "arn:aws:rds-db:us-east-1:<account-id>:dbuser:<cluster-identifier>/iam_rds_poc"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["rds-db:connect", "rds:*"],
+      "Resource": [
+        "arn:aws:rds-db:us-east-1:<account-id>:dbuser:<cluster-identifier>/iam_rds_poc"
+      ]
+    }
+  ]
 }
 ```
 
@@ -78,19 +74,16 @@ And it worked!! But, clearly this is very permissive. So, I read through the rds
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "rds-db:connect",
-                "rds:Describe*"
-            ],
-            "Resource": [
-                "arn:aws:rds-db:us-east-1:<account-id>:dbuser:<cluster-identifier>/iam_rds_poc"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["rds-db:connect", "rds:Describe*"],
+      "Resource": [
+        "arn:aws:rds-db:us-east-1:<account-id>:dbuser:<cluster-identifier>/iam_rds_poc"
+      ]
+    }
+  ]
 }
 ```
 

@@ -2,8 +2,9 @@
 layout: post
 title: "today I learned about: aws local zones"
 tags: [aws, compute, local-zones]
-date: '2021-11-08'
+date: "2021-11-08"
 ---
+
 Today I was listening to [this](https://aws.amazon.com/podcasts/482-introducing-aws-local-zones/) aws podcast. The concept of local zones interested me, so I decided to dig a tiny bit deeper.
 
 An aws local zone is compute on the edge. It’s basically a region that sits really close to the end-user. Because it’s so close, you get a close entrypoint into the aws network and get to capitalize on the aws backbone.

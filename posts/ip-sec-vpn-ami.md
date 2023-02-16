@@ -2,8 +2,9 @@
 layout: post
 title: ip-sec-vpn ami
 tags: [ami, aws, security]
-date: '2021-11-13'
+date: "2021-11-13"
 ---
+
 We allow developers to connect to resources in private subnets using an [ipsec-vpn-server](https://hub.docker.com/r/hwdsl2/ipsec-vpn-server), i.e., bastion host.
 
 This is a container that provisions users and runs on a public ec2 instance. We allow the security group attached to the ec2 instance access to explicit ports on certain private resources.
@@ -17,6 +18,7 @@ Then, when we spin up an environment, I [share the ami](https://docs.aws.amazon.
 Ideally the next step is to automate this using terraform, so that we don't have to manually spin up the instance. The sharing of the `ami` would always be a manual process...maybe?
 
 But, we cut down the steps drastically. We simply:
+
 - share the ami
 - start the ami on an ec2 instance
 - and provide a specific security group

@@ -2,8 +2,9 @@
 layout: post
 title: "1password and aws credentials"
 tags: [productivity]
-date: '2023-02-10'
+date: "2023-02-10"
 ---
+
 I heavily rely on 1password for my daily workflow. I have to be in any given environment at any given time, and want to admit a bad practice I had. I had a bash script that exported aws credentials based on what environment I wanted to be in. Yes, they were on my machine (except for prod), yes it felt wrong, and yes I knew there was probably a better way.
 
 1password taught me that better way. [This](https://blog.1password.com/1password-cli-2_0) blog article came out, and I immediately implemented it. I don't want to go into the setup, because that article does it perfectly. Instead I will show you some things I did to speed my flow up. This post assumes you have gone through the setup process, which helps understand some of the concepts I cover.
@@ -31,6 +32,7 @@ As long as you have an `access_key_id` and a `secret_access_key` defined on the 
   who
 }
 ```
+
 Ignore `1pcc` for now, but this script exports the credentials to the config file, and echos out the identity for validation.
 
 Next, I needed a way to clear these credentials at any time. I chose the name `1pcc`, which stands for 1password clear credentials. It clears out the file that 1password reads from, and then tells me who I am...which should print out no identity. The script looks like this:
@@ -66,7 +68,6 @@ So, from the command-line to be in our dev account I can just:
 ```sh
 eda
 ```
-
 
 This was a lot, but helps to secure your machine and environments. Credentials are not on your system and you have to be authenticated by 1password to pull the credentials. Speaking of that, you can also [enable touch id](https://support.1password.com/touch-id-mac) to eliminate the need to continuously enter a password.
 

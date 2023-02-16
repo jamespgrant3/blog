@@ -2,8 +2,9 @@
 layout: post
 title: "today I: started tinkering with k8s again"
 tags: [k8s]
-date: '2021-11-14'
+date: "2021-11-14"
 ---
+
 It's been awhile since I played with kubernetes, maybe six months or so? In fact, the last time I tried to get a local cluster stood up I became frustrated with getting an ingress controller to work. I was using [microk8s](https://microk8s.io/). I was doing cool things, but couldn't get it exposed.
 
 Ingress controllers are needed to expose your service to the outside world, by mapping a route to a k8s service.

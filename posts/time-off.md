@@ -2,8 +2,9 @@
 layout: post
 title: time away
 tags: []
-date: '2023-02-08'
+date: "2023-02-08"
 ---
+
 I was heavily devoted to sharing my findings, and then it just 100% stopped. Well, first...I went on vacation to Guatemala for the month of December. I have been struggling to get back in the groove ever since.
 
 The real challenge has honesly just been juggling the time. Most of January was spent working and studying Spanish. However, I really want to devote some time towards blogging. It might not be daily, but a few times a week.

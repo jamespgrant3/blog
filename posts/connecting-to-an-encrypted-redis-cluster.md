@@ -2,8 +2,9 @@
 layout: post
 title: connecting to an encrypted redis cluster
 tags: [aws, elasticache, redis]
-date: '2021-11-18'
+date: "2021-11-18"
 ---
+
 I recently had the privilege of being tasked with setting up a redis cluster. Super easy. But, I also needed to ensure that we could connect to the cluster so that if anything went wrong, we could troubleshoot.
 
 This post is my thought process and the solutions I tried to resolve the matter...so it's a bit winded.
@@ -47,6 +48,7 @@ ENV PATH "$PATH:src"
 ```
 
 After building the image, I ran:
+
 ```sh
 docker run my-redis redis-cli -h <my-cluser-primary-endpoint> -p 6379
 ```

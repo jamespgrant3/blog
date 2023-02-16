@@ -1,9 +1,11 @@
 ---
 title: resources
 ---
+
 A few resources I follow.
 
 ### blogs
+
 [aws blog](https://aws.amazon.com/blogs/)
 
 [aws whats new feed](https://aws.amazon.com/new)
@@ -11,11 +13,13 @@ A few resources I follow.
 [cloudonaut](https://cloudonaut.io/)
 
 ### youtube
+
 [theprimeagen](https://www.youtube.com/@ThePrimeagen)
 
 [teej](https://www.youtube.com/@teej_dv)
 
 ### podcasts
+
 [aws podcast](https://aws.amazon.com/podcasts/aws-podcast/?podcast-list.sort-by=item.additionalFields.EpisodeNum&podcast-list.sort-order=desc&awsf.episode-type=*all&awsf.tech-category-filter=*all&awsf.product-filter=*all&awsf.industry-filter=*all)
 
 [serverless chats](https://www.serverlesschats.com/)

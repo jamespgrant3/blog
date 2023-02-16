@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
-import { getPostsForTag, getTags } from '../../lib/tags'
-import Post from '../../components/post';
+import { getPostsForTag, getTags } from "../../lib/tags";
+import Post from "../../components/post";
 import Link from "next/link";
 import Footer from "../../components/footer";
 
 export default function Tag({ id, posts }) {
   return (
-      <Layout tag>
+    <Layout tag>
       <Head>
         <title>tag: {id}</title>
       </Head>
@@ -26,16 +26,15 @@ export default function Tag({ id, posts }) {
         <h2 className={utilStyles.headingLg}>Posts for: #{id}</h2>
         <ul className={utilStyles.list}>
           {" "}
-          {posts ?
-            (<ul className={utilStyles.list}>
-            {
-              posts.map(({ id , date, title }) => (
+          {posts ? (
+            <ul className={utilStyles.list}>
+              {posts.map(({ id, date, title }) => (
                 <Post key={id} id={id} date={date} title={title} />
-              ))
-            }
-            </ul>) :
-          (<div>no posts</div>)}
-          {" "}
+              ))}
+            </ul>
+          ) : (
+            <div>no posts</div>
+          )}{" "}
         </ul>
       </section>
       <Footer title={`tag: ${id}`} />
@@ -44,11 +43,11 @@ export default function Tag({ id, posts }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getTags()
+  const paths = getTags();
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
@@ -57,7 +56,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       id,
-      posts
-    }
-  }
+      posts,
+    },
+  };
 }

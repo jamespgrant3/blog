@@ -2,8 +2,9 @@
 layout: post
 title: remote tfvars file
 tags: [aws, terraform]
-date: '2021-11-06'
+date: "2021-11-06"
 ---
+
 As we began building out features in our application it started to become necessary to have parameter store values that could **NOT** be committed to source control.
 
 Until now, we had been adding values to the environment specific `terraform.tfvars` file and passing them into an `infra` module. Worked beautifully. Then secret'ish values started to creep in. How can we add values to parameter store without committing?

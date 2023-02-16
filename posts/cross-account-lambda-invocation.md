@@ -2,11 +2,13 @@
 layout: post
 title: cross account lambda invocation
 tags: [aws, lambda]
-date: '2021-10-18'
+date: "2021-10-18"
 ---
+
 I've known that you can invoke lambdas cross-account, but I have never actually implemented one, until this week. It's really easy. In this example, `account-a` will be the account that owns the lambda, and `account-b` will be the account calling the lambda.
 
 Lambdas allow for resource policies to be attached. I attached a resource policy specifying that a specific principal (role) from `account-b`, could `InvokeFunction` on a specific lambda, like this:
+
 ```json
 {
   "Effect": "Allow",
@@ -19,16 +21,17 @@ Lambdas allow for resource policies to be attached. I attached a resource policy
 ```
 
 Next, on the invoking function's execution role, I attached a policy that allowed for `InvokeFunction` on the lambda in `account-a`.
+
 ```json
 {
   "Version": "2012-10-17",
-  "Statement": [{
-    "Effect": "Allow",
-    "Action": [
-      "lambda:InvokeFunction"
-    ],
-    "Resource": "arn:aws:lambda:us-east-1:<account-a-id>:function:my-function"
-  }]
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["lambda:InvokeFunction"],
+      "Resource": "arn:aws:lambda:us-east-1:<account-a-id>:function:my-function"
+    }
+  ]
 }
 ```
 

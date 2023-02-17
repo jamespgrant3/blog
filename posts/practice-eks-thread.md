@@ -41,10 +41,30 @@ My next steps are to start getting pods in the cluster, and figuring out how to 
 
 _Update: 02-15-2023_
 
-Today wasn't too productive. I was able to get `kubectl` installed, and ran a command to update my local config to point to my eks cluster:
+Today wasn't too productive. I was able to get `kubectl` installed, and ran a command to update my local config to point to my EKS cluster:
 
 ```sh
 aws eks update-kubeconfig --region us-east-1 --name k8s-practice
 ```
 
 This command added a `config` file to my `$HOME/.kube` directory.
+
+_Update: 02-16-2023_
+
+Today I added a node role and a node group, see [here](https://github.com/jamespgrant3/eks-practice/commit/77a297fe375bdd6c94b246d89d91fe6efb8c2f0).
+
+The node role gives permissions for a few things. First, It gives read only permissions to ECR. It gives several describe permissions to EC2 and the EKS cluster. It also gives the node the ability to do things nodes need to be able to do: assign private IP's and manage network interfaces.
+
+Prior to making the node group, I started making the k8s deployment. I applied the deployment....and waited and waited. It wouldn't start. Finally, I described the pods.
+
+![no-nodes](/images/eks/no-nodes.png)
+
+![console-no-nodes](/images/eks/console-no-nodes.png)
+
+Imagine that, an EKS cluster needing compute! :) That's when I read about node groups. After about 5 minutes, I had compute!!!
+
+![kubectl-nodes](/images/eks/kubectl-nodes.png)
+
+![console-nodes](/images/eks/console-nodes.png)
+
+We're getting closer, little by little!!

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: blog rewrite
-tags: ["javascript"]
+tags: [blog]
 date: "2023-02-13"
 ---
 

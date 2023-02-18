@@ -1,35 +1,35 @@
-version: 2.1
-orbs:
-  aws-cli: circleci/aws-cli@3.1.4
-jobs:
-  deploy:
-    working_directory: ~/project
-    docker:
-      - image: cimg/node:18.13.0
-    environment:
-      S3_BUCKET_NAME: jamespgrant3.com
-    steps:
-      - checkout
-      - aws-cli/setup
-      - run:
-          name: npm install
-          command: npm i
-      - run:
-          name: nextjs build
-          command: npm run deploy
-      - run:
-          name: upload to s3
-          command: aws s3 sync ./out s3://$S3_BUCKET_NAME/ --delete
-      - run:
-          name: invalidate cloudfront distribution
-          command: |
-            aws cloudfront create-invalidation \
-            --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text) \
-            --paths "/*"
-workflows:
-  blog-deploy:
-    jobs:
-      - deploy:
-          filters:
-            branches:
-              only: master
+#version: 2.1
+#orbs:
+#  aws-cli: circleci/aws-cli@3.1.4
+#jobs:
+#  deploy:
+#    working_directory: ~/project
+#    docker:
+#      - image: cimg/node:18.13.0
+#    environment:
+#      S3_BUCKET_NAME: jamespgrant3.com
+#    steps:
+#      - checkout
+#      - aws-cli/setup
+#      - run:
+#          name: npm install
+#          command: npm i
+#      - run:
+#          name: nextjs build
+#          command: npm run deploy
+#      - run:
+#          name: upload to s3
+#          command: aws s3 sync ./out s3://$S3_BUCKET_NAME/ --delete
+#      - run:
+#          name: invalidate cloudfront distribution
+#          command: |
+#            aws cloudfront create-invalidation \
+#            --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text) \
+#            --paths "/*"
+#workflows:
+#  blog-deploy:
+#    jobs:
+#      - deploy:
+#          filters:
+#            branches:
+#              only: master

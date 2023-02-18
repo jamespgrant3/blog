@@ -70,8 +70,7 @@ We're getting closer, little by little!!
 
 #### Update: 02-17-2023
 
-Today was some good learning, AND, I was able to get pods running. You can see todays changes [here](https://github.com/jamespgrant3/eks-practice/commit/1b717d87cd70ff417012954fd5aa2bb066264f5e
-).
+Today was some good learning, AND, I was able to get pods running. You can see todays changes [here](https://github.com/jamespgrant3/eks-practice/commit/1b717d87cd70ff417012954fd5aa2bb066264f5e).
 
 First mistake...attempting to be cheap and run a k8s cluster on `t4g.micro` instances. I kept getting this in the console:
 

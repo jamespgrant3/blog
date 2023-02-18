@@ -6,9 +6,17 @@ date: "2023-02-06"
 
 I was speaking to a good friend of mine this weekend, and he had a brilliant idea....as he always does. He recommended that I not only blog tech things, but that I actually DO some tech things, and talk about it.
 
-As we're talking, my brain is thinking about all the possibilities. I quickly landed on EKS. I had an early love for k8s. Every time I have had an opportunity to interact with it, it's been abstracted away from me.
+As we're talking, my brain is thinking about all the possibilities. I quickly landed on EKS. I had an early love for Kubernetes, also abbreviated k8s. Every time I have had an opportunity to interact with it, it's been abstracted away from me.
 
-My goal is to use cloudformation, and only focus on the cloud. I am not worried about pipelines, or the cleanest of typescripts. All the code will be in one repository, so you should be able to easily recreate the infrastructure and hopefully learn from it. I will try to script out as much as I can, to remove some of the tediousness.
+For those that don't know, EKS stands for Elastic Kubernetes Service. It's AWS' answer to a managed service that runs a k8s cluster. You can read more [here](https://aws.amazon.com/eks), but at a high level k8s is a container orchestration service. It manages the availability and scalability of your container-based workloads.
+
+At the core, you have a cluster, nodes, and pods. A cluster manages one or more nodes.  Nodes are a machine, or server, devoted to running your pods. A pod is an instance of your application, running inside a container.
+
+How does k8s help the scalability of your application? You configure an ideal state for k8s, and it will do its best to ensure that state is met. Let's say you instruct k8s to have 3 pods containing your web ui running across your cluster. If for some reason a pod dies, k8s will ensure another one is created for you. You can also configure k8s to scale the amount of pods up or down based on metrics like cpu utilization.
+
+How does k8s help your applications availability? A cluster contains one to many nodes. You can configure k8s to have nodes that span availability zones (AZ). An AZ is a data center. So the idea is, you spread your compute out across several AZs, and k8s will place your pods on these nodes. So in the event an AZ experiences an outage, your application continues to run. In fact, your application will scale to meet desired configuration across the nodes that are left.
+
+My goal with this project is to use cloudformation, and only focus on the cloud. I am not worried about pipelines, or the cleanest of typescripts. All the code will be in one repository, so you should be able to easily recreate the infrastructure and hopefully learn from it. I will try to script out as much as I can, to remove some of the tediousness.
 
 Rather than individual posts throughout the learning, I will continue to update this post.
 

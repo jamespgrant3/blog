@@ -2,6 +2,7 @@ name: deploy
 on: [push]
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     name: blog-deploy
     steps:
       - name: checkout

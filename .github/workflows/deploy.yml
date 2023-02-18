@@ -27,8 +27,8 @@ jobs:
           aws-region: us-east-1
       - name: upload to s3
         run: aws s3 sync ./out s3://$S3_BUCKET_NAME/ --delete
-      #- name: invalidate cloudfront distribution
-      #  run: |
-      #    aws cloudfront create-invalidation \
-      #    --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text) \
-      #    --paths "/*"
+      - name: invalidate cloudfront distribution
+        run: |
+          aws cloudfront create-invalidation \
+          --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text) \
+          --paths "/*"

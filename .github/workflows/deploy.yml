@@ -11,5 +11,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci
-
+      - name: npm install
+        run: npm ci
+      - name: nextjs build
+        run: npm run deploy

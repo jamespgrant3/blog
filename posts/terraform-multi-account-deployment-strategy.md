@@ -1,5 +1,4 @@
 ---
-layout: post
 title: terraform multi-account deployment strategy
 tags: [aws, terraform]
 date: "2021-10-27"

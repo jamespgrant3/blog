@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ip-sec-vpn ami
 tags: [ami, aws, security]
 date: "2021-11-13"

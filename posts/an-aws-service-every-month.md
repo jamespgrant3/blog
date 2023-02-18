@@ -1,5 +1,4 @@
 ---
-layout: post
 title: An AWS Service Every Month
 tags: [aws, services]
 date: "2021-11-22"

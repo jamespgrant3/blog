@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "1password and aws credentials"
 tags: [productivity]
 date: "2023-02-10"

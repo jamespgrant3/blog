@@ -1,5 +1,4 @@
 ---
-layout: post
 title: lambda layers
 tags: [aws, lambda, serverless]
 date: "2021-11-24"

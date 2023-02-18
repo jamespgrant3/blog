@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "moonlander"
 tags: [productivity]
 date: "2023-02-07"

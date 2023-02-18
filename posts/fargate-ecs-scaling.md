@@ -1,5 +1,4 @@
 ---
-layout: post
 title: fargate ecs scaling
 tags: [aws, ecs, fargate]
 date: "2021-10-13"

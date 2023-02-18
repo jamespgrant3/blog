@@ -1,5 +1,4 @@
 ---
-layout: post
 title: connecting to an encrypted redis cluster
 tags: [aws, elasticache, redis]
 date: "2021-11-18"

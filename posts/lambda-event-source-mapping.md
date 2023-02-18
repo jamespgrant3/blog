@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "lambda event source mapping"
 tags: [aws, lambda]
 date: "2023-02-01"

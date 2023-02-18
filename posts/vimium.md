@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "vimium"
 tags: [vim, productivity]
 date: "2023-01-30"

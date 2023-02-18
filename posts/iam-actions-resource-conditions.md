@@ -1,5 +1,4 @@
 ---
-layout: post
 title: iam actions, resources, & conditions
 tags: [aws, iam]
 date: "2021-10-15"

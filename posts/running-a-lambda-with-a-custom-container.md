@@ -1,5 +1,4 @@
 ---
-layout: post
 title: running a custom container in a lambda
 tags: [aws, container, lambda]
 date: "2022-11-03"

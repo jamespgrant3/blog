@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I learned about: aws local zones"
 tags: [aws, compute, local-zones]
 date: "2021-11-08"

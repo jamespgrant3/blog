@@ -1,5 +1,4 @@
 ---
-layout: post
 title: terraform resource sharing
 tags: [api-gateway, aws, serverless-framework, terraform]
 date: "2021-10-10"

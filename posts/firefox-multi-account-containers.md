@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "firefox multi-account containers"
 tags: [productivity]
 date: "2023-01-31"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: it's okay to ignore changes
 tags: [aws, terraform]
 date: "2021-11-07"

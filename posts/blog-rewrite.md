@@ -1,5 +1,4 @@
 ---
-layout: post
 title: blog rewrite
 tags: [blog]
 date: "2023-02-13"

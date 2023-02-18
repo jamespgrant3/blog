@@ -1,5 +1,4 @@
 ---
-layout: post
 title: cross account lambda invocation
 tags: [aws, lambda]
 date: "2021-10-18"

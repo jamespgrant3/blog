@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ecs supports reading json keys from secrets manager
 tags: [aws, ecs, secrets-manager]
 date: "2021-10-23"

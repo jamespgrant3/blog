@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I learned: aurora handles replication"
 tags: [aurora, aws, terraform]
 date: "2021-11-05"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I learned: about a distroless image"
 tags: [container, docker]
 date: "2023-02-08"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: time away
 tags: []
 date: "2023-02-08"

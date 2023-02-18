@@ -1,5 +1,4 @@
 ---
-layout: post
 title: iam quotas
 tags: [aws, iam]
 date: "2021-10-11"

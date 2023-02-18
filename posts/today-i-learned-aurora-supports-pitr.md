@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I learned: aurora supports pitr"
 tags: [aurora, database]
 date: "2022-11-08"

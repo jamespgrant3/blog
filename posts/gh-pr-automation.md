@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "automate creating a pull request using the github cli"
 tags: [git, automation, productivity]
 date: "2023-01-29"

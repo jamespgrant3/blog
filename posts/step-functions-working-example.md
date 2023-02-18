@@ -1,5 +1,4 @@
 ---
-layout: post
 title: step functions working example
 tags: [aws, step-functions]
 date: "2022-02-18"

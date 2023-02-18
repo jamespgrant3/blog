@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I learned about: scaling ecs tasks"
 tags: [aws, ecs, scaling]
 date: "2021-11-10"

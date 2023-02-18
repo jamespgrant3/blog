@@ -1,5 +1,4 @@
 ---
-layout: post
 title: ecs roles
 tags: [aws, ecs]
 date: "2021-10-22"

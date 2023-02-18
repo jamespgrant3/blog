@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I learned about: finding cloudwatch events/metrics"
 tags: [aws, cloudwatch]
 date: "2021-11-11"

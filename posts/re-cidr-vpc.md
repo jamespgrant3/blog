@@ -1,5 +1,4 @@
 ---
-layout: post
 title: re-cidr a vpc
 tags: [aws, vpc]
 date: "2022-02-27"

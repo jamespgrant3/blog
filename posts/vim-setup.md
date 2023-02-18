@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "vim configuration"
 tags: [vim, zsh, productivity]
 date: "2023-01-28"

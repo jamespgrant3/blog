@@ -1,5 +1,4 @@
 ---
-layout: post
 title: cross-account dns
 tags: [aws, r53]
 date: "2022-02-09"

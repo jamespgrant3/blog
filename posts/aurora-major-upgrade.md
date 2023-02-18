@@ -1,5 +1,4 @@
 ---
-layout: post
 title: aurora major upgrade, 12.4 to 13.3
 tags: [aurora, aws, postgres, rds]
 date: "2021-10-12"

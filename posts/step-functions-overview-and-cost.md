@@ -1,5 +1,4 @@
 ---
-layout: post
 title: step functions, overview and cost
 tags: [aws, step-functions]
 date: "2022-02-13"

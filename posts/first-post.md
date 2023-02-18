@@ -1,5 +1,4 @@
 ---
-layout: post
 title: first post
 tags: []
 date: "2021-10-09"

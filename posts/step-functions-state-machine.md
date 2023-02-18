@@ -1,5 +1,4 @@
 ---
-layout: post
 title: step functions, state machine
 tags: [aws, step-functions]
 date: "2022-02-14"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: aurora iam authentication
 tags: [aws, iam, rds]
 date: "2022-02-28"

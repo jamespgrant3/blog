@@ -1,5 +1,4 @@
 ---
-layout: post
 title: remote tfvars file
 tags: [aws, terraform]
 date: "2021-11-06"

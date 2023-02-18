@@ -1,5 +1,4 @@
 ---
-layout: post
 title: enforcing mfa with iam
 tags: [aws, iam, mfa]
 date: "2021-11-04"

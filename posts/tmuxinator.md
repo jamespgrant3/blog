@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "tmuxinator"
 tags: [vim, productivity, tmux]
 date: "2023-02-04"

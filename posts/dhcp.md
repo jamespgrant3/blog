@@ -1,5 +1,4 @@
 ---
-layout: post
 title: dhcp
 tags: [aws, vpc]
 date: "2022-03-06"

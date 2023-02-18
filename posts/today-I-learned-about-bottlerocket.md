@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I learned about: bottlerocket"
 tags: [aws, container]
 date: "2021-11-01"

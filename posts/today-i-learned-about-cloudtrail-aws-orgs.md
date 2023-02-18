@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I learned: cloudtrail and aws organizations"
 tags: [aws, cloudtrail, organizations]
 date: "2023-02-02"

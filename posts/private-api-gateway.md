@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "private api gateway"
 tags: [aws, api-gateway]
 date: "2023-01-27"

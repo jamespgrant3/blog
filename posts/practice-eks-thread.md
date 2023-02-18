@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "practice: eks (thread)"
 tags: [aws, eks, practice]
 date: "2023-02-06"

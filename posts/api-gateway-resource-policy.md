@@ -1,5 +1,4 @@
 ---
-layout: post
 title: api-gateway resource policy
 tags: [api-gateway]
 date: "2022-05-31"

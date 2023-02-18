@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "today I: started tinkering with k8s again"
 tags: [k8s]
 date: "2021-11-14"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "note to self: use full semver version with docker tags"
 tags: [docker, ecs]
 date: "2022-12-14"

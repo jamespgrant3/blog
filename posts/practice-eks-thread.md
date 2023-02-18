@@ -68,3 +68,32 @@ Imagine that, an EKS cluster needing compute! :) That's when I read about node g
 ![console-nodes](/images/eks/console-nodes.png)
 
 We're getting closer, little by little!!
+
+#### Update: 02-17-2023
+
+Today was some good learning, AND, I was able to get pods running. You can see todays changes [here](https://github.com/jamespgrant3/eks-practice/commit/1b717d87cd70ff417012954fd5aa2bb066264f5e
+).
+
+First mistake...attempting to be cheap and run a k8s cluster on `t4g.micro` instances. I kept getting this in the console:
+
+![cheap-instance-console](/images/eks/cheap-instance-console.png)
+
+When I looked in the console, there was 0 capacity:
+
+![cheap-instance](/images/eks/cheap-instance.png)
+
+So I increased to the next cheapest option: `t4g.small`. I then had enough capacity to run this entire project.
+
+![capacity](/images/eks/capacity.png)
+
+This next issue took some time, and it shouldn't have. I kept getting the ole `Back-off restarting failed container` error.
+
+![backoff](/images/eks/backoff.png)
+
+Of course, I exhausted all of my searches. Finally, I looked at the logs for the pod and saw `exec /usr/local/bin/docker-entrypoint.sh: exec format error`. I googled, and started seeing folks talk about chipsets, and it hit me. The cluster is arm-based, my mac is an Intel. This shouldn't have taken so long to figure out, I already cross-compile containers all day at work. When I finally added the `--platform linux/arm64` option to the docker build step....and applied the k8 configuration:
+
+![money](/images/eks/money.png)
+
+Money!! Pods were running.
+
+Next, I think I have to get the deployment behind a k8s service...I think? I then have to front the service with a load balancer. So close!!

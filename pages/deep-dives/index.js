@@ -1,18 +1,23 @@
 import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
-import { getAboutPage } from "../../lib/about";
+import { getResourcesPage } from "../../lib/resources";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import Link from "next/link";
 
-export default function About({ page }) {
+export default function DeepDives({ page }) {
   return (
-    <Layout about>
+    <Layout deepDives>
       <Header title={page.title}></Header>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>About</h2>
+        <h2 className={utilStyles.headingLg}>Deep Dives</h2>
       </section>
       <article>
-        <div dangerouslySetInnerHTML={{ __html: page.content }} />
+        <ul>
+          <li>
+            <Link href={`/posts/practice-eks-thread`}>eks</Link>{" "}
+          </li>
+        </ul>
       </article>
       <Footer title={page.title} />
     </Layout>
@@ -20,7 +25,7 @@ export default function About({ page }) {
 }
 
 export async function getStaticProps() {
-  const page = await getAboutPage();
+  const page = await getResourcesPage();
   return {
     props: {
       page,

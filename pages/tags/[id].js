@@ -1,27 +1,14 @@
-import Head from "next/head";
 import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
 import { getPostsForTag, getTags } from "../../lib/tags";
 import Post from "../../components/post";
-import Link from "next/link";
 import Footer from "../../components/footer";
+import Header from "../../components/header";
 
 export default function Tag({ id, posts }) {
   return (
     <Layout tag>
-      <Head>
-        <title>tag: {id}</title>
-      </Head>
-      <section className={utilStyles.headingMd}>
-        <p>
-          A passionate learner, cloud architect, full-stack developer, and
-          command-line enthusiast
-        </p>
-        <Link href={`/`}>[blog]</Link>{" "}
-        <Link href={`/resources`}>[resources]</Link>{" "}
-        <Link href={`/about`}>[about]</Link>{" "}
-      </section>
-      <hr />
+      <Header title={`tag ${id}`}></Header>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Posts for: #{id}</h2>
         <ul className={utilStyles.list}>

@@ -1,27 +1,15 @@
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 import Footer from "../../components/footer";
+import Header from "../../components/header";
 
 export default function Post({ post }) {
   return (
     <Layout>
-      <Head>
-        <title>{post.title}</title>
-      </Head>
-      <section className={utilStyles.headingMd}>
-        <p>
-          A passionate learner, cloud architect, full-stack developer, and
-          command-line enthusiast
-        </p>
-        <Link href={`/`}>[blog]</Link>{" "}
-        <Link href={`/resources`}>[resources]</Link>{" "}
-        <Link href={`/about`}>[about]</Link>{" "}
-      </section>
-      <hr />
+      <Header title={post.title}></Header>
       <article>
         <h1 className={utilStyles.headingXl}>{post.title}</h1>
         <div className={utilStyles.lightText}>

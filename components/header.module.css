@@ -1,0 +1,23 @@
+.links {
+  margin: auto;
+  width: 60%;
+}
+
+.links > .linkWrapper {
+  margin: auto;
+  width: 400px;
+}
+
+.links > .linkWrapper > .link {
+}
+
+@media screen and (max-width: 500px) {
+  .links {
+    width: 100%;
+  }
+
+  .links > .linkWrapper {
+    margin: auto;
+    width: 100%;
+  }
+}

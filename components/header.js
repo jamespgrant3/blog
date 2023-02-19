@@ -1,6 +1,7 @@
 import Head from "next/head";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import headerStyles from "./header.module.css";
 
 export default function Header({ title }) {
   return (
@@ -9,13 +10,26 @@ export default function Header({ title }) {
         <title>{title}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>
-          A cloud architect, full-stack developer, command-line enthusiast, and passionate learner
+        <p className={utilStyles.marginTopZero}>
+          A cloud architect, full-stack developer, command-line enthusiast, and
+          passionate learner
         </p>
-        <Link href={`/`}>[blog]</Link>{" "}
-        <Link href={`/deep-dives`}>[deep dives]</Link>{" "}
-        <Link href={`/resources`}>[resources]</Link>{" "}
-        <Link href={`/about`}>[about]</Link>{" "}
+        <div className={headerStyles.links}>
+          <div className={headerStyles.linkWrapper}>
+            <Link className={headerStyles.link} href={`/`}>
+              [blog]
+            </Link>{" "}
+            <Link className={headerStyles.link} href={`/deep-dives`}>
+              [deep dives]
+            </Link>{" "}
+            <Link className={headerStyles.link} href={`/resources`}>
+              [resources]
+            </Link>{" "}
+            <Link className={headerStyles.link} href={`/about`}>
+              [about]
+            </Link>{" "}
+          </div>
+        </div>
       </section>
       <hr />
     </>

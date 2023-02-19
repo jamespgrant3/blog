@@ -1,0 +1,14 @@
+.footer {
+  margin: auto;
+  width: 50%;
+}
+
+.footer > .iconWrapper {
+  margin: auto;
+  width: 200px;
+}
+
+.footer > .iconWrapper > .icon {
+  font-size: 30px;
+  margin: 0px 10px;
+}

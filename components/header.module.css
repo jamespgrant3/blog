@@ -9,9 +9,10 @@
 }
 
 .links > .linkWrapper > .link {
+  display: inline;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 575px) {
   .links {
     width: 100%;
   }
@@ -19,5 +20,9 @@
   .links > .linkWrapper {
     margin: auto;
     width: 100%;
+  }
+
+  .links > .linkWrapper .link {
+    display: block;
   }
 }

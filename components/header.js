@@ -16,18 +16,18 @@ export default function Header({ title }) {
         </p>
         <div className={headerStyles.links}>
           <div className={headerStyles.linkWrapper}>
-            <Link className={headerStyles.link} href={`/`}>
-              [blog]
-            </Link>{" "}
-            <Link className={headerStyles.link} href={`/deep-dives`}>
-              [deep dives]
-            </Link>{" "}
-            <Link className={headerStyles.link} href={`/resources`}>
-              [resources]
-            </Link>{" "}
-            <Link className={headerStyles.link} href={`/about`}>
-              [about]
-            </Link>{" "}
+            <div className={headerStyles.link}>
+              <Link href={`/`}>[blog]</Link>{" "}
+            </div>
+            <div className={headerStyles.link}>
+              <Link href={`/deep-dives`}>[deep dives]</Link>{" "}
+            </div>
+            <div className={headerStyles.link}>
+              <Link href={`/resources`}>[resources]</Link>{" "}
+            </div>
+            <div className={headerStyles.link}>
+              <Link href={`/about`}>[about]</Link>{" "}
+            </div>
           </div>
         </div>
       </section>

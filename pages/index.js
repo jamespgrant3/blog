@@ -3,13 +3,10 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Post from "../components/post";
 import Link from "next/link";
-import Footer from "../components/footer";
-import Header from "../components/header";
 
 export default function Home({ allPosts }) {
   return (
-    <Layout home>
-      <Header title={siteTitle}></Header>
+    <Layout title={siteTitle} home>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <p>
           Current ongoing learnings:{" "}
@@ -22,7 +19,6 @@ export default function Home({ allPosts }) {
           ))}{" "}
         </ul>
       </section>
-      <Footer title={siteTitle} />
     </Layout>
   );
 }

@@ -3,13 +3,10 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
-import Footer from "../../components/footer";
-import Header from "../../components/header";
 
 export default function Post({ post }) {
   return (
-    <Layout>
-      <Header title={post.title}></Header>
+    <Layout title={post.title}>
       <article>
         <h1 className={utilStyles.headingXl}>{post.title}</h1>
         <div className={utilStyles.lightText}>
@@ -29,7 +26,6 @@ export default function Post({ post }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </article>
-      <Footer title={post.title} />
     </Layout>
   );
 }

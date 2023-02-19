@@ -2,13 +2,10 @@ import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
 import { getPostsForTag, getTags } from "../../lib/tags";
 import Post from "../../components/post";
-import Footer from "../../components/footer";
-import Header from "../../components/header";
 
 export default function Tag({ id, posts }) {
   return (
-    <Layout tag>
-      <Header title={`tag ${id}`}></Header>
+    <Layout title={`tag ${id}`} tag>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Posts for: #{id}</h2>
         <ul className={utilStyles.list}>
@@ -24,7 +21,6 @@ export default function Tag({ id, posts }) {
           )}{" "}
         </ul>
       </section>
-      <Footer title={`tag: ${id}`} />
     </Layout>
   );
 }

@@ -17,7 +17,7 @@ export default function Header({ title }) {
         <div className={headerStyles.links}>
           <div className={headerStyles.linkWrapper}>
             <div className={headerStyles.link}>
-              <Link href={`/`}>[blog]</Link>{" "}
+              <Link href={`/`}>[posts]</Link>{" "}
             </div>
             <div className={headerStyles.link}>
               <Link href={`/deep-dives`}>[deep dives]</Link>{" "}

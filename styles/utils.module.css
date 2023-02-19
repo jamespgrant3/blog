@@ -50,3 +50,13 @@
 .lightText {
   color: #666;
 }
+
+.iconWrapper {
+  margin: auto;
+  width: 60%;
+}
+
+.iconWrapper > .icon {
+  font-size: 30px;
+  margin: 0px 10px;
+}

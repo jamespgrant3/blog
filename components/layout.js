@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import { BiArrowBack } from "react-icons/bi";
 
 export const siteTitle = "jamespgrant3.com";
 
@@ -30,15 +31,15 @@ export default function Layout({ children, home, title }) {
       <main>
         <Header title={title} />
         {children}
-        <Footer title={title} />
       </main>
       {!home && (
         <div className={styles.backToHome}>
           <Link onClick={() => router.back()} href="/">
-            ← Back
+            <BiArrowBack /> Back
           </Link>
         </div>
       )}
+      <Footer title={title} />
     </div>
   );
 }

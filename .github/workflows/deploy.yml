@@ -4,7 +4,12 @@ on:
     branches:
       - master
     paths:
+      - 'components/**'
+      - 'lib/**'
+      - 'pages/**'
       - 'posts/**'
+      - 'public/**'
+      - 'styles/**'
 
 jobs:
   deploy:

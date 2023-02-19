@@ -13,7 +13,7 @@ export default function Header({ title }) {
           A cloud architect, full-stack developer, command-line enthusiast, and passionate learner
         </p>
         <Link href={`/`}>[blog]</Link>{" "}
-        <Link href={`/deep-dives`}>[deep-dives]</Link>{" "}
+        <Link href={`/deep-dives`}>[deep dives]</Link>{" "}
         <Link href={`/resources`}>[resources]</Link>{" "}
         <Link href={`/about`}>[about]</Link>{" "}
       </section>

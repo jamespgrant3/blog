@@ -9,7 +9,7 @@ export default function Home({ allPosts }) {
     <Layout title={siteTitle} home>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <p>
-          Current ongoing learnings:{" "}
+          Current deep dive:{" "}
           <Link href={`/posts/practice-eks-thread`}>eks</Link>
         </p>
         <h2 className={utilStyles.headingLg}>Posts</h2>

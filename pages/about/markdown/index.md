@@ -14,7 +14,7 @@ As a test to my learnings, I obtained the Solutions Architect Associate certific
 
 ### Certifications
 
-<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="cd3fe4f8-ffea-4f65-962c-d15b20325783" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+[![cert](/images/aws-certified-solutions-architect-associate.png)](https://www.credly.com/badges/cd3fe4f8-ffea-4f65-962c-d15b20325783/public_url)
 
 ### Interests
 
@@ -26,4 +26,4 @@ As a test to my learnings, I obtained the Solutions Architect Associate certific
 
 ### Blog Tech
 
-This site hosts static content on s3 and is fronted by cloudfront. I am currently using nextjs, and a few packages, to generate the static content from markdown files. This site is deployed using circle-ci.
+This site hosts static content on s3 and is fronted by cloudfront. I am currently using nextjs, and a few packages, to generate the static content from markdown files. This site is deployed using github actions.

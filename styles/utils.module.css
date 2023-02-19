@@ -51,12 +51,17 @@
   color: #666;
 }
 
-.iconWrapper {
+.footer {
   margin: auto;
-  width: 60%;
+  width: 50%;
 }
 
-.iconWrapper > .icon {
+.footer > .iconWrapper {
+  margin: auto;
+  width: 190px;
+}
+
+.footer > .iconWrapper > .icon {
   font-size: 30px;
   margin: 0px 10px;
 }

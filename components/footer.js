@@ -6,7 +6,7 @@ import utilStyles from "../styles/utils.module.css";
 
 export default function Footer({ title }) {
   return (
-    <>
+    <div className={utilStyles.footer}>
       <div className={utilStyles.iconWrapper}>
         <Link className={utilStyles.icon} href="https://github.com/jamespgrant3">
           <FaGithub />
@@ -22,7 +22,7 @@ export default function Footer({ title }) {
         </Link>
       </div>
       <GoogleAnalytics page={title} />
-    </>
+    </div>
   );
 }
 

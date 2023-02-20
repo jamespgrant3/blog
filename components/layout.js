@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { BiArrowBack } from "react-icons/bi";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export const siteTitle = "jamespgrant3.com";
 
@@ -28,18 +29,35 @@ export default function Layout({ children, home, title }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <main>
-        <Header title={title} />
-        {children}
-      </main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link onClick={() => router.back()} href="/">
-            <BiArrowBack /> Back
-          </Link>
-        </div>
-      )}
-      <Footer title={title} />
+      <GoogleReCaptchaProvider
+        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
+        useRecaptchaNet
+        scriptProps={{
+          async: true,
+          defer: true,
+          appendTo: "body",
+        }}
+        container={{
+          element: "captcha",
+          parameters: {
+            badge: "bottomright",
+          },
+        }}
+      >
+        <main>
+          <Header title={title} />
+          {children}
+        </main>
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link onClick={() => router.back()} href="/">
+              <BiArrowBack /> Back
+            </Link>
+          </div>
+        )}
+        <Footer title={title} />
+        <div id="captcha"></div>
+      </GoogleReCaptchaProvider>
     </div>
   );
 }

@@ -1,6 +1,9 @@
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/date";
+import Comment from "../../components/comment";
+import CommentList from "../../components/comment-list";
+
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 
@@ -25,6 +28,9 @@ export default function Post({ post }) {
           )}
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+        <Comment />
+        <CommentList />
+
       </article>
     </Layout>
   );

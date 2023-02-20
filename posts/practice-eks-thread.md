@@ -103,3 +103,42 @@ Of course, I exhausted all of my searches. Finally, I looked at the logs for the
 Money!! Pods were running.
 
 Next, I think I have to get the deployment behind a k8s service...I think? I then have to front the service with a load balancer. So close!!
+
+#### Update: 02-20-2023
+Today, I was able to finally get the cluster working, see the commit [here](https://github.com/jamespgrant3/eks-practice/commit/a2b54cd3c5c6dce2d37be2bd1be566464e0aed4f)!!
+
+This commit does several things. First, I created two services. In k8s, a service is a grouping of pods. The service manages the ip addresses of the pods that match a selector, and it exposes these pods as a single dns. I created a service called the `user-api-service`. These pods are now exposed to the cluster, with a simple call to `http://user-api-service`, assuming that you have not defined a network policy.
+
+Next, I created a service for the api-service. This service has a `LoadBalancer` type. Which means just that, k8s exposes this service to the outside world using a load balancer. So what is happening here? I wanted to mimic a SOA, a service calling another service.
+
+The `api-service` is a base api, and it exposes a `/users` route to the world. When called, that api makes a call to the `user-api-service`, and returns a random number of users with random names.
+
+![payload1](/images/eks/payload.png)
+
+Cool, how is all of this really working....and prove it!
+
+Looking at the commit above,  I instructed k8s to maintain 2 replicas of the deployment for each of the apis. Looking at `kubectl`, which I have aliased as `k` for simplicity, you see 4 pods running.
+
+![pods](/images/eks/pods.png)
+
+Lets describe the api pods.
+
+![describe-pod-1](/images/eks/describe-pod-1.png)
+
+![describe-pod-2](/images/eks/describe-pod-2.png)
+
+Each pod has its own ip address. These ips should be managed by the service, lets see:
+
+![describe-svc](/images/eks/describe-svc.png)
+
+And, k8s actually has an `endpointslices` resource that the `service` references. It's a more focused view of just the ip addresses:
+
+![get-endpointslices](/images/eks/get-endpointslices.png)
+
+This implementation works. And, I know there is room for improvement. For example, I think it's a best practice to use an ingress controller. Which is a k8s resource that sits between the load balancer and pods. You can create routing rules to route traffic to pods. I could also put a network policy on the user-api, to only allow the base api to talk to it.
+
+The purpose of this little deep dive was to relearn k8s, and demonstrate it in a working example. I might pop back in this project to update it.
+
+I often wonder when I would use k8s. Clearly it's real power is when you're into SOA. Service discovery is powerful, control over pod communication is useful. I struggle with the cost. I have seen implementations with 40 nodes running in ONE test environment....and they had several lower environments. Granted, this was a huge company, so they could afford it. But, should they have to when there are alternatives? I couldn't see the bills, but I can only imagine. Since I left, they pulled the k8s plug. All-in on ECS Fargate. I guess, in the end, they realized they shouldn't have to.
+
+I'm not knocking k8s. I think it could be easy to jump onboard, because it is really cool. There are serious cost and management implications, so I would definitely consider all options before going down that path.

@@ -1,6 +1,6 @@
 ---
 title: "practice: eks (thread)"
-tags: [aws, eks, practice]
+tags: [aws, eks, deep-dive]
 date: "2023-02-06"
 ---
 

@@ -10,7 +10,7 @@ As we're talking, my brain is thinking about all the possibilities. I quickly la
 
 For those that don't know, EKS stands for Elastic Kubernetes Service. It's AWS' answer to a managed service that runs a k8s cluster. You can read more [here](https://aws.amazon.com/eks), but at a high level k8s is a container orchestration service. It manages the availability and scalability of your container-based workloads.
 
-At the core, you have a cluster, nodes, and pods. A cluster manages one or more nodes.  Nodes are a machine, or server, devoted to running your pods. A pod is an instance of your application, running inside a container.
+At the core, you have a cluster, nodes, and pods. A cluster manages one or more nodes. Nodes are a machine, or server, devoted to running your pods. A pod is an instance of your application, running inside a container.
 
 How does k8s help the scalability of your application? You configure an ideal state for k8s, and it will do its best to ensure that state is met. Let's say you instruct k8s to have 3 pods containing your web ui running across your cluster. If for some reason a pod dies, k8s will ensure another one is created for you. You can also configure k8s to scale the amount of pods up or down based on metrics like cpu utilization.
 
@@ -105,6 +105,7 @@ Money!! Pods were running.
 Next, I think I have to get the deployment behind a k8s service...I think? I then have to front the service with a load balancer. So close!!
 
 #### Update: 02-20-2023
+
 Today, I was able to finally get the cluster working, see the commit [here](https://github.com/jamespgrant3/eks-practice/commit/a2b54cd3c5c6dce2d37be2bd1be566464e0aed4f)!!
 
 This commit does several things. First, I created two services. In k8s, a service is a grouping of pods. The service manages the ip addresses of the pods that match a selector, and it exposes these pods as a single dns. I created a service called the `user-api-service`. These pods are now exposed to the cluster, with a simple call to `http://user-api-service`, assuming that you have not defined a network policy.
@@ -117,7 +118,7 @@ The `api-service` is a base api, and it exposes a `/users` route to the world. W
 
 Cool, how is all of this really working....and prove it!
 
-Looking at the commit above,  I instructed k8s to maintain 2 replicas of the deployment for each of the apis. Looking at `kubectl`, which I have aliased as `k` for simplicity, you see 4 pods running.
+Looking at the commit above, I instructed k8s to maintain 2 replicas of the deployment for each of the apis. Looking at `kubectl`, which I have aliased as `k` for simplicity, you see 4 pods running.
 
 ![pods](/images/eks/pods.png)
 

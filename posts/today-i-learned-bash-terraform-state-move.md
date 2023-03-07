@@ -8,18 +8,18 @@ I resigned from my current job last week. There is one part of the terraform con
 
 I created the concept of a "template" in terraform. At one point, we had four development environments. So, rather than having to manage each environment separately, I created a template module that wrapped the configuration of all these environments. So when I changed one development environment, I changed them all.
 
-This sounded like a great idea at the time. I still think it kind of makes sense. Here's the problem. The layers were unmanageable. To add a parameter store value, which occurs in the common module, you had to do the following:
+This sounded like a great idea at the time. I still think it kind of makes sense. Here's the problem. The layers were unmanageable. To add an aws parameter store value, which are managed in the common module, you had to do the following:
 - update the `variables.tf` file in the main module, and update `main.tf` to pass the value down into the template module.
 - update the `variables.tf` file in the template module, and update `main.tf` to pass the value down into the common module.
 - update the `variables.tf` file in the common module, update the appropriate file to do something with the parameter.
 
-This sucks. I have been dealing with it, because it's just me doing the cloud work. I knew I would get to it someday. However, I do not want others having to deal with my decisions. Also, in the past few months we've decommissioned two of the development environments and have one or two more on deck to be axed. The template module no longer makes sense. This was WAY too many layers for developers to jump through for one common task.
+This sucks. I have been dealing with it, because it's just me doing the cloud work. I knew I would fix it someday. However, I do not want others having to deal with my decisions. Also, in the past few months we've decommissioned two of the development environments and have one or two more on deck to be axed. The template module no longer makes sense. This was WAY too many layers for developers to jump through for one common task.
 
 The problem, terraform state is derived from the module structure. In removing the module, when I go to deploy, every resource will look new because the state file no longer matches what terraform is expecting to deploy. The fix is to massage the state file to make it look like what it should look like after a deployment without the template module. This is what state currently looks like:
 
 ![terraform-state-list](/images/bash-terraform-state-list.png)
 
-In removing the template module, `module.infra.` gets removed from each resource. So sdeally, I would like to generate a shell script that creates a bunch of commands that modify state. We could use a regex to replace `module.infra` with empty text.
+In removing the template module, `module.infra.` gets removed from each resource. So ideally, I would like to generate a shell script that creates a bunch of commands that modify state. We could use a regex to replace `module.infra` with empty text.
 
 How can I easily modify the state? Nobody wants to modify these resources individually. The answer: bash!! The script:
 

@@ -4,11 +4,11 @@ tags: [zsh, terraform]
 date: "2023-03-06"
 ---
 
-I resigned from my current job last week. There is one part of the terraform configuration that I know could be better, and I do not want developers inheriting. So today, I decided to make the change to leave it better than I wrote it.
+There is one part of the terraform configuration that I know could be better, and I do not want developers inheriting. So today, I decided to make the change to leave it better than I wrote it.
 
 I created the concept of a "template" in terraform. At one point, we had four development environments. So, rather than having to manage each environment separately, I created a template module that wrapped the configuration of all these environments. So when I changed one development environment, I changed them all.
 
-This sounded like a great idea at the time. I still think it kind of makes sense. Here's the problem. The layers were unmanageable. To add an aws parameter store value, which are managed in the common module, you had to do the following:
+This sounded like a great idea at the time. I still think it kind of makes sense. Here's the problem. The layers were unmanageable. To add an aws parameter store value, which are managed in a module called common, you had to do the following:
 - update the `variables.tf` file in the main module, and update `main.tf` to pass the value down into the template module.
 - update the `variables.tf` file in the template module, and update `main.tf` to pass the value down into the common module.
 - update the `variables.tf` file in the common module, update the appropriate file to do something with the parameter.

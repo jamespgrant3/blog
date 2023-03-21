@@ -1,5 +1,5 @@
 ---
-title: "today I learned: outpost, eks"
+title: "today I learned: outpost, eks on outpost"
 tags: [aws, eks, outpost]
 date: "2023-03-20"
 ---

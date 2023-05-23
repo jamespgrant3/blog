@@ -229,6 +229,7 @@ title: vim cheatsheet
 - **`:ccl`** - close the quickfix list
 - **`:cn`** - go to next item in the list
 - **`:cp`** - go to previuos item in the list
+- **`<C-q>`** - open the quickfix list from telescope
 
 ## netrw
 

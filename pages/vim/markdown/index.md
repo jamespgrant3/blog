@@ -313,4 +313,4 @@ title: vim cheatsheet
 ## tmux move panes
 
 - **`<leader>c`** - move current pane clockwise
-- **`<leader>u`** - move current pane counter clockwise
+- **`<leader>d`** - move current pane counter clockwise

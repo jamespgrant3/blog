@@ -15,7 +15,7 @@ export default function Keys({ page }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const page = await getKeysPage();
   return {
     props: {

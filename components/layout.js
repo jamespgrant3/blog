@@ -44,7 +44,7 @@ export default function Layout({ children, home, title }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getInitialProps() {
   return {
     props: {
       title,

@@ -15,7 +15,7 @@ export default function About({ page }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const page = await getAboutPage();
   return {
     props: {

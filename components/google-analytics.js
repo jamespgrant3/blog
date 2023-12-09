@@ -8,7 +8,7 @@ export default function GoogleAnalytics({ page }) {
   }
 }
 
-export async function getStaticProps() {
+export async function getInitialProps() {
   return {
     props: {
       page,

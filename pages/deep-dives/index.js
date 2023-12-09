@@ -23,7 +23,7 @@ export default function DeepDives({ page }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const page = await getResourcesPage();
   return {
     props: {

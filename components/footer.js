@@ -38,7 +38,7 @@ export default function Footer({ title }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getInitialProps() {
   return {
     props: {
       title,

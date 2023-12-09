@@ -36,8 +36,7 @@ export default function Header({ title }) {
   );
 }
 
-export async function getStaticProps() {
-  return {
+export async function getInitialProps() { return {
     props: {
       title,
     },

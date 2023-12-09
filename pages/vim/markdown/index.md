@@ -271,6 +271,12 @@ title: vim cheatsheet
 - **`<prefix>k`** - to clear the terminal window
 - **`<prefix>r`** - to reload .tmux.conf
 
+### session
+
+- **`<prefix>:new -s <name>`** - new
+- **`<prefix>s`** - switch
+- **`<prefix>:kill-ses -t <name>`** - kill
+
 ### window navigation
 
 - **`<prefix>\<window number\>`** - to toggle between windows

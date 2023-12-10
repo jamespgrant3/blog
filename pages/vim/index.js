@@ -15,7 +15,7 @@ export default function Vim({ page }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const page = await getVimPage();
   return {
     props: {

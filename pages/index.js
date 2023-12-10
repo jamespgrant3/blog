@@ -23,7 +23,7 @@ export default function Home({ allPosts }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const allPosts = getSortedPostsData();
   return {
     props: {

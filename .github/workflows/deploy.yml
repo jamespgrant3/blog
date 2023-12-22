@@ -3,6 +3,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'components/**'
+      - 'lib/**'
+      - 'pages/**'
+      - 'posts/**'
+      - 'public/**'
+      - 'styles/**'
 jobs:
   deploy:
     runs-on: ubuntu-latest

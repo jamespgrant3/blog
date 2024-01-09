@@ -12,6 +12,9 @@ export default function DeepDives({ page }) {
       <article>
         <ul>
           <li>
+            <Link href={`/posts/practice-observability-thread`}>observability</Link>{" "}
+          </li>
+          <li>
             <Link href={`/posts/practice-ecs-thread`}>ecs</Link>{" "}
           </li>
           <li>

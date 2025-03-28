@@ -9,19 +9,19 @@
     "start": "next start"
   },
   "dependencies": {
-    "date-fns": "^2.30.0",
+    "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^15.2.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-ga4": "^2.1.0",
-    "react-icons": "^4.12.0",
-    "remark": "^14.0.3",
-    "remark-html": "^15.0.2"
+    "react-icons": "^5.5.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "eslint-config-next": "13.1.6",
-    "eslint-config-prettier": "^8.10.0",
-    "highlight.js": "^11.9.0"
+    "eslint-config-next": "15.2.4",
+    "eslint-config-prettier": "^10.1.1",
+    "highlight.js": "^11.11.1"
   }
 }

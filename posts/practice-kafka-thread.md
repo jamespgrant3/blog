@@ -30,7 +30,7 @@ All of the code required to get a cluster stood up can be found [here](https://g
 The first step is to get kubernetes running. To do this, we need a container runtime (colima) and a k8s cluster (minikube).
 
 ### colima
-After intalling colima, run the following command to start it:
+After installing colima, run the following command to start it:
 ```bash
 colima start --cpu 4 --memory 16
 ```
@@ -155,7 +155,7 @@ curl -d '{"topic":"my-topic","messages": [{ "key": "dispute",  "value": "a trans
 ```
 
 ## results
-
+Now you can start to see how kafka works when it comes to partitions, the key really does make a difference as it dictates what partition the message gets stored on. You can now scale consumers to see how the redistribution works.
 
 ![topic-results](/images/kafka/topic-results.png)
 

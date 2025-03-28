@@ -40,6 +40,7 @@ jobs:
         run: aws s3 sync ./out s3://$S3_BUCKET_NAME/ --delete
       - name: invalidate cloudfront distribution
         run: |
+          export AWS_DEFAULT_OUTPUT=text
           aws cloudfront create-invalidation \
-          --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id" --output text) \
+          --distribution-id $(aws cloudfront list-distributions --query "DistributionList.Items[0].Id") \
           --paths "/*"

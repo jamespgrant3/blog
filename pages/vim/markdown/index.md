@@ -266,6 +266,12 @@ title: vim cheatsheet
 
 ## tmux
 
+### split resize
+- **`<left-option>h`** - resize the current split to the left
+- **`<left-option>l`** - resize the current split to the right
+- **`<left-option>k`** - resize the current split up
+- **`<left-option>j`** - resize the current split down
+
 ### general shortcut keys
 
 - **`<prefix>k`** - to clear the terminal window

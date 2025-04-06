@@ -19,6 +19,6 @@ This statement creates a grant on a key, and allows the principal to conduct the
 
 Grants have many operations that can be assigned. You can even create grants that allow principals to manage a grant.
 
-This is just a quick post for awareness. I thought it was a pretty cool way to abstract kms permisisons. I wish the console gave you a view into the grants. It looks like the api for grants is only accessible through the cli?
+This is just a quick post for awareness. I thought it was a pretty cool way to abstract kms permissions. I wish the console gave you a view into the grants. It looks like the api for grants is only accessible through the cli?
 
 You can read more about this feature in the [aws docs](https://docs.aws.amazon.com/kms/latest/developerguide/grants.html).

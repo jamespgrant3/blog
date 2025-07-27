@@ -2,16 +2,20 @@
 title: keys
 ---
 
-### Moonlander Key Bindings
+### Corne36 Key Bindings
 
 #### layer 0
 
-![layer0](/images/keys/layer-0.png)
+![layer0](/images/keys/0.png)
 
 #### layer 1
 
-![layer1](/images/keys/layer-1.png)
+![layer1](/images/keys/1.png)
 
 #### layer 2
 
-![layer2](/images/keys/layer-2.png)
+![layer2](/images/keys/2.png)
+
+#### layer 3
+
+![layer3](/images/keys/3.png)

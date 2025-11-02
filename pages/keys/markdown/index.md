@@ -15,7 +15,3 @@ title: keys
 #### layer 2
 
 ![layer2](/images/keys/2.png)
-
-#### layer 3
-
-![layer3](/images/keys/3.png)

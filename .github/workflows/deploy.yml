@@ -4,12 +4,14 @@ on:
     branches:
       - master
     paths:
-      - 'components/**'
-      - 'lib/**'
-      - 'pages/**'
-      - 'posts/**'
-      - 'public/**'
-      - 'styles/**'
+      - "components/**"
+      - "lib/**"
+      - "pages/**"
+      - "posts/**"
+      - "public/**"
+      - "styles/**"
+      - "package-lock.json"
+
   workflow_dispatch:
 jobs:
   deploy:
